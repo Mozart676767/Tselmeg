@@ -132,13 +132,13 @@
       padding-right:calc(2 * var(--u))}
     .rule span{display:inline-block; vertical-align:top; width:calc(100 * var(--u));
       height:100%; border-radius:calc(2.5 * var(--u)); background:var(--cyan); transform-origin:center}
-    p.lede{top:calc(426 * var(--u)); font-size:calc(18 * var(--u)); font-weight:400;
+    p.lede{top:calc(416 * var(--u)); font-size:calc(18 * var(--u)); font-weight:400;
       line-height:calc(28 * var(--u)); color:rgba(255,255,255,.95);
       max-width:calc(860 * var(--u)); margin:0 auto; left:0; right:calc(var(--gutter) * var(--u))}
 
-    .bio-box{display:flex; flex-direction:column; align-items:center; gap:calc(8 * var(--u))}
+    .bio-box{display:flex; flex-direction:column; align-items:center; gap:calc(6 * var(--u))}
     .bio-age{font-size:calc(20 * var(--u)); font-weight:600; color:#fff; letter-spacing:calc(0.5 * var(--u))}
-    .bio-group{display:flex; flex-wrap:wrap; justify-content:center; gap:calc(8 * var(--u)) calc(12 * var(--u)); max-width:calc(860 * var(--u))}
+    .bio-group{display:flex; flex-wrap:wrap; justify-content:center; gap:calc(6 * var(--u)) calc(12 * var(--u)); max-width:calc(860 * var(--u))}
     .bio-chip{display:inline-flex; align-items:center; background:rgba(255,255,255,.08);
       border:calc(1 * var(--u)) solid rgba(255,255,255,.18);
       padding:calc(4 * var(--u)) calc(14 * var(--u)); border-radius:calc(20 * var(--u));
@@ -146,10 +146,29 @@
       backdrop-filter:blur(calc(8 * var(--u))); -webkit-backdrop-filter:blur(calc(8 * var(--u)))}
     .bio-chip b{color:var(--cyan); font-weight:600; margin-right:calc(5 * var(--u))}
     .bio-heading{font-size:calc(13.5 * var(--u)); font-weight:700; text-transform:uppercase;
-      letter-spacing:calc(2.5 * var(--u)); color:var(--cyan); margin-top:calc(4 * var(--u))}
+      letter-spacing:calc(2.5 * var(--u)); color:var(--cyan); margin-top:calc(3 * var(--u))}
+
+    .bio-project{margin-top:calc(6 * var(--u)); display:flex; justify-content:center; width:100%}
+    .bio-project-link{display:inline-flex; align-items:center; justify-content:center;
+      gap:calc(6 * var(--u));
+      background:linear-gradient(135deg, rgba(121,220,232,0.18) 0%, rgba(14,42,82,0.7) 100%);
+      border:calc(1.5 * var(--u)) solid rgba(121,220,232,0.65);
+      padding:calc(6 * var(--u)) calc(18 * var(--u)); border-radius:calc(24 * var(--u));
+      font-size:calc(15 * var(--u)); line-height:calc(22 * var(--u)); color:#ffffff;
+      text-decoration:none; backdrop-filter:blur(calc(8 * var(--u))); -webkit-backdrop-filter:blur(calc(8 * var(--u)));
+      box-shadow:0 calc(4 * var(--u)) calc(16 * var(--u)) rgba(95,208,225,0.25);
+      transition:all .22s cubic-bezier(.2,1,.3,1); pointer-events:auto; cursor:pointer}
+    .bio-project-link:hover{
+      background:linear-gradient(135deg, rgba(121,220,232,0.32) 0%, rgba(20,60,110,0.9) 100%);
+      border-color:rgba(121,220,232,0.98);
+      box-shadow:0 calc(6 * var(--u)) calc(22 * var(--u)) rgba(95,208,225,0.5);
+      transform:translateY(calc(-1.5 * var(--u)))}
+    .bio-project-icon{font-size:calc(15 * var(--u)); display:inline-block; line-height:1}
+    .bio-project-url{color:var(--cyan); font-weight:600; text-decoration:underline;
+      text-underline-offset:calc(2 * var(--u)); letter-spacing:calc(0.3 * var(--u))}
 
     /* CTA ROW */
-    .cta{top:calc(648 * var(--u)); height:calc(66 * var(--u)); isolation:isolate}
+    .cta{top:calc(672 * var(--u)); height:calc(66 * var(--u)); isolation:isolate}
     .cta a{display:inline-flex; align-items:center; justify-content:center;
       width:calc(216 * var(--u)); height:calc(66 * var(--u)); border-radius:calc(33 * var(--u));
       font-size:calc(17 * var(--u)); font-weight:700; letter-spacing:0; text-indent:0;
@@ -224,7 +243,7 @@
       .navbar::after{left:calc(25 * var(--u)); right:calc(25 * var(--u))}
       p.lede{max-width:calc(680 * var(--u)); margin-left:auto; margin-right:auto}
       .label.label-r{right:calc(116 * var(--u))}
-      .cta{top:calc(648 * var(--u))}
+      .cta{top:calc(672 * var(--u))}
     }
 
     /* C) PHONE */
@@ -255,6 +274,11 @@
       .bio-age{font-size:calc(17 * var(--u))}
       .bio-chip{font-size:calc(13 * var(--u)); line-height:calc(18 * var(--u)); padding:calc(3 * var(--u)) calc(10 * var(--u))}
       .bio-heading{font-size:calc(12 * var(--u)); margin-top:calc(2 * var(--u))}
+      .bio-project{margin-top:calc(6 * var(--u))}
+      .bio-project-link{font-size:calc(12.5 * var(--u)); line-height:calc(18 * var(--u));
+        padding:calc(5 * var(--u)) calc(12 * var(--u)); border-radius:calc(18 * var(--u)); text-align:center}
+      .bio-project-text{font-size:calc(12.5 * var(--u))}
+      .bio-project-url{font-size:calc(12 * var(--u))}
       .cta{top:auto; margin-top:calc(26 * var(--u)); height:calc(60 * var(--u)); position:relative; margin-bottom:calc(90 * var(--u))}
       .cta a{width:calc(190 * var(--u)); height:calc(60 * var(--u)); border-radius:calc(30 * var(--u))}
       .label{top:50%; transform:translateY(-50%); font-size:calc(16 * var(--u));
@@ -363,7 +387,7 @@
         <div class="col eyebrow"><span class="ent-mask"><span class="ent-line">Sain uu ? Namaig A.Tselmeg gedeg</span></span></div>
         <h1 class="col title"><span class="ent-mask"><span class="ent-line">Minii taniltsuulga</span></span></h1>
         <div class="col rule"><span></span></div>
-        <p class="col lede"><span class="bio-box"><span class="bio-age">Bi 11 nastai</span><span class="bio-group"><span class="bio-chip"><b>Hobbi:</b> hol bombog togloh</span><span class="bio-chip"><b>Durtai hamtlag:</b> longshot</span><span class="bio-chip"><b>Durtai kino:</b> SPIDER MAN</span><span class="bio-chip">Bi Miles morales gedeg huuheldein anime iig buten uzsen</span></span><span class="bio-heading">Sonirholtoi fraktuud</span><span class="bio-group"><span class="bio-chip"><b>Durtai hool:</b> huushuur</span><span class="bio-chip"><b>Durtai togloom:</b> counter strike</span><span class="bio-chip">Nola Oskar gedeg 2 muur baidag</span></span></span></p>
+        <p class="col lede"><span class="bio-box"><span class="bio-age">Bi 11 nastai</span><span class="bio-group"><span class="bio-chip"><b>Hobbi:</b> hol bombog togloh</span><span class="bio-chip"><b>Durtai hamtlag:</b> longshot</span><span class="bio-chip"><b>Durtai kino:</b> SPIDER MAN</span><span class="bio-chip">Bi Miles morales gedeg huuheldein anime iig buten uzsen</span></span><span class="bio-heading">Sonirholtoi fraktuud</span><span class="bio-group"><span class="bio-chip"><b>Durtai hool:</b> huushuur</span><span class="bio-chip"><b>Durtai togloom:</b> counter strike</span><span class="bio-chip">Nola Oskar gedeg 2 muur baidag</span></span><div class="bio-project"><a href="https://dreamy-starship-b0f0b8.netlify.app" target="_blank" rel="noopener noreferrer" class="bio-project-link"><span class="bio-project-icon">🔗</span><span class="bio-project-url">https://dreamy-starship-b0f0b8.netlify.app ↗</span></a></div></span></p>
         <div class="col cta">
           <button class="planet planet-l" type="button" data-slot="l">
             <img data-planet="earth" alt="" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202005_3346cc4d-ec3b-44ab-825c-b18e49f5021a.png">
@@ -375,7 +399,7 @@
             <img data-planet="venus" alt="" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202012_640b239a-d08a-4200-adb2-741bbe129ac8.png">
             <img data-planet="mars" alt="" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202018_3d559490-f613-4ed7-a3bb-3b7e9fc90fb8.png">
           </button>
-          <a href="#">GET STARTED</a>
+          <a href="https://dreamy-starship-b0f0b8.netlify.app" target="_blank" rel="noopener noreferrer" id="main-cta">GET STARTED</a>
           <span class="label label-l"></span>
           <span class="label label-r"></span>
         </div>
@@ -427,7 +451,7 @@
           eyebrow: 'Sain uu ? Namaig A.Tselmeg gedeg',
           name: 'Minii taniltsuulga',
           still: 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260827_202133_508c64b8-a31e-4290-bdfc-1187df70e0a6.png',
-          lede: '<span class="bio-box"><span class="bio-age">Bi 11 nastai</span><span class="bio-group"><span class="bio-chip"><b>Hobbi:</b> hol bombog togloh</span><span class="bio-chip"><b>Durtai hamtlag:</b> longshot</span><span class="bio-chip"><b>Durtai kino:</b> SPIDER MAN</span><span class="bio-chip">Bi Miles morales gedeg huuheldein anime iig buten uzsen</span></span><span class="bio-heading">Sonirholtoi fraktuud</span><span class="bio-group"><span class="bio-chip"><b>Durtai hool:</b> huushuur</span><span class="bio-chip"><b>Durtai togloom:</b> counter strike</span><span class="bio-chip">Nola Oskar gedeg 2 muur baidag</span></span></span>'
+          lede: '<span class="bio-box"><span class="bio-age">Bi 11 nastai</span><span class="bio-group"><span class="bio-chip"><b>Hobbi:</b> hol bombog togloh</span><span class="bio-chip"><b>Durtai hamtlag:</b> longshot</span><span class="bio-chip"><b>Durtai kino:</b> SPIDER MAN</span><span class="bio-chip">Bi Miles morales gedeg huuheldein anime iig buten uzsen</span></span><span class="bio-heading">Sonirholtoi fraktuud</span><span class="bio-group"><span class="bio-chip"><b>Durtai hool:</b> huushuur</span><span class="bio-chip"><b>Durtai togloom:</b> counter strike</span><span class="bio-chip">Nola Oskar gedeg 2 muur baidag</span></span><div class="bio-project"><a href="https://dreamy-starship-b0f0b8.netlify.app" target="_blank" rel="noopener noreferrer" class="bio-project-link"><span class="bio-project-icon">🔗</span><span class="bio-project-url">https://dreamy-starship-b0f0b8.netlify.app ↗</span></a></div></span>'
         },
         venus: {
           eyebrow: 'Minii zorilgo',
@@ -454,6 +478,7 @@
       const slotR = document.querySelector('.planet-r');
       const labelL = document.querySelector('.label.label-l');
       const labelR = document.querySelector('.label.label-r');
+      const mainCta = document.getElementById('main-cta');
 
       function updateSlot(btn, labelEl, planetKey) {
         if (!btn) return;
@@ -510,6 +535,15 @@
         // 5. p.lede innerHTML
         if (lede) {
           lede.innerHTML = PLANETS[next].lede;
+        }
+
+        // main CTA link
+        if (mainCta) {
+          if (next === 'earth') {
+            mainCta.href = 'https://dreamy-starship-b0f0b8.netlify.app';
+            mainCta.target = '_blank';
+            mainCta.rel = 'noopener noreferrer';
+          }
         }
 
         // 6. rest = ORDER minus `next`
