@@ -605,8 +605,112 @@
     }
     .ag-btn-secondary:hover{background:rgba(255,255,255,0.15); border-color:rgba(121,220,232,0.6)}
 
+    .ag-save-box{
+      width:100%; max-width:460px; display:flex; flex-direction:column; gap:10px;
+      padding:16px; border-radius:16px;
+      background:rgba(15, 29, 58, 0.65);
+      border:1px solid rgba(121, 220, 232, 0.22);
+    }
+    .ag-save-label{
+      font-size:14px; font-weight:600; color:#e2e8f0; text-align:left;
+    }
+    .ag-save-form{display:flex; gap:10px; align-items:stretch}
+    .ag-input{
+      flex:1; min-width:0; min-height:44px; padding:10px 14px; border-radius:12px;
+      background:rgba(4, 11, 24, 0.85);
+      border:1px solid rgba(255, 255, 255, 0.22);
+      color:#ffffff; font-family:var(--font-body); font-size:15px;
+      outline:none; transition:border-color .16s ease;
+    }
+    .ag-input::placeholder{color:rgba(203, 213, 225, 0.5)}
+    .ag-input:focus{border-color:var(--cyan)}
+    .ag-save-btn{
+      padding:10px 18px; min-height:44px; border-radius:12px; border:0;
+      background:var(--cyan); color:#04101f;
+      font-family:var(--font-body); font-size:14.5px; font-weight:700;
+      cursor:pointer; white-space:nowrap;
+      transition:opacity .16s ease, transform .16s ease;
+    }
+    .ag-save-btn:hover:not(:disabled){opacity:0.92; transform:translateY(-1px)}
+    .ag-save-btn:disabled{opacity:0.55; cursor:not-allowed}
+    .ag-save-status{
+      font-size:13.5px; font-weight:600; text-align:left; min-height:18px;
+    }
+    .ag-save-status.is-ok{color:#6ee7b7}
+    .ag-save-status.is-err{color:#fca5a5}
+    .ag-save-status.is-muted{color:rgba(203, 213, 225, 0.78)}
+    .ag-saved-bar{
+      width:100%; max-width:460px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+      padding:12px 16px; border-radius:14px;
+      background:rgba(15, 29, 58, 0.65);
+      border:1px solid rgba(121, 220, 232, 0.22);
+      font-size:14px; text-align:left;
+    }
+    .ag-change-name-btn{
+      background:none; border:0; padding:4px 6px; color:rgba(121, 220, 232, 0.85);
+      font-family:var(--font-body); font-size:12.5px; font-weight:600;
+      cursor:pointer; text-decoration:underline; white-space:nowrap;
+    }
+    .ag-change-name-btn:hover{color:#ffffff}
+
+    .ag-board{
+      width:100%; max-width:460px; display:flex; flex-direction:column; gap:8px;
+      text-align:left; padding-top:6px;
+    }
+    .ag-board-title{
+      font-size:13px; font-weight:700; letter-spacing:0.6px;
+      color:var(--cyan); text-transform:uppercase;
+    }
+    .ag-board-list{
+      display:flex; flex-direction:column;
+      border-top:1px solid rgba(255, 255, 255, 0.12);
+    }
+    .ag-board-row{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      padding:8px 2px; border-bottom:1px solid rgba(255, 255, 255, 0.08);
+      font-size:13.5px; color:#e2e8f0; font-variant-numeric:tabular-nums;
+    }
+    .ag-board-left{display:flex; align-items:center; gap:8px; min-width:0}
+    .ag-board-rank{color:var(--cyan); font-weight:700; width:20px; flex:none}
+    .ag-board-name{font-weight:600; color:#ffffff; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+    .ag-board-meta{font-size:12px; color:rgba(203, 213, 225, 0.68); white-space:nowrap}
+    .ag-board-score{font-weight:700; color:var(--cyan); white-space:nowrap}
+    .ag-board-row.is-mine{background:rgba(121, 220, 232, 0.14); padding:8px 8px; border-radius:8px}
+
+    /* PER-MODE LEADERBOARD UNDER EACH MODE CARD */
+    .ag-mode-col{display:flex; flex-direction:column; gap:10px; min-width:0}
+    .ag-mode-col .ag-mode-btn{width:100%}
+    .ag-mini-board{
+      padding:12px 14px; border-radius:14px;
+      background:rgba(4, 11, 24, 0.62);
+      border:1px solid rgba(255, 255, 255, 0.1);
+      display:flex; flex-direction:column; gap:6px;
+    }
+    .ag-mini-title{
+      font-size:12px; font-weight:700; letter-spacing:0.5px;
+      color:var(--cyan); text-transform:uppercase;
+      display:flex; align-items:center; justify-content:space-between; gap:6px;
+    }
+    .ag-mini-empty{font-size:12.5px; color:rgba(203, 213, 225, 0.6); padding:4px 0}
+    .ag-mini-row{
+      display:flex; align-items:center; justify-content:space-between; gap:8px;
+      padding:5px 0; border-top:1px solid rgba(255, 255, 255, 0.07);
+      font-size:13px; color:#e2e8f0; font-variant-numeric:tabular-nums;
+    }
+    .ag-mini-name{
+      display:flex; align-items:center; gap:6px; min-width:0;
+      overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+      color:#ffffff; font-weight:500;
+    }
+    .ag-mini-rank{color:var(--cyan); font-weight:700; flex:none}
+    .ag-mini-score{color:var(--cyan); font-weight:700; flex:none}
+    .ag-mini-row.is-mine{background:rgba(121, 220, 232, 0.14); padding:5px 7px; border-radius:8px}
+
+    .ag-play-board{max-width:none; padding-top:10px; border-top:1px solid rgba(255, 255, 255, 0.1)}
+
     .ag-back-btn:focus-visible,.ag-mode-btn:focus-visible,.ag-opt-btn:focus-visible,
-    .ag-btn-primary:focus-visible,.ag-btn-secondary:focus-visible,.ag-sound-btn:focus-visible{
+    .ag-btn-primary:focus-visible,.ag-btn-secondary:focus-visible,.ag-sound-btn:focus-visible,
+    .ag-save-btn:focus-visible,.ag-input:focus-visible{
       outline:2px solid var(--cyan); outline-offset:2px;
     }
 
@@ -619,6 +723,7 @@
       .ag-stage-box{min-height:185px; padding:14px}
       .ag-img-wrap{max-width:300px}
       .ag-img-wrap.is-character{max-width:180px}
+      .ag-save-form{flex-direction:column}
     }
   </style>
 </head>
@@ -696,6 +801,7 @@
     </button>
   </div>
 
+  <script type="module" src="/src/firebaseScores.ts"></script>
   <script>
     (function(){
       // 8. ENTRANCE ANIMATION DRIVER
@@ -982,8 +1088,32 @@
         advanceId: null,
         runToken: 0,
         soundOn: true,
-        audioCtx: null
+        audioCtx: null,
+        leaderboards: null,
+        leaderboardsError: false,
+        lastSavedId: null,
+        playerName: (function() {
+          try { return String(localStorage.getItem('anime_guess_player_name') || '').trim(); } catch (e) { return ''; }
+        })()
       };
+
+      function rememberPlayerName(name) {
+        const clean = String(name || '').trim().slice(0, 40);
+        game.playerName = clean;
+        try {
+          if (clean) localStorage.setItem('anime_guess_player_name', clean);
+          else localStorage.removeItem('anime_guess_player_name');
+        } catch (e) {}
+      }
+
+      function isMyRow(row) {
+        if (!row) return false;
+        if (game.lastSavedId && row.id === game.lastSavedId) return true;
+        if (game.playerName && row.name) {
+          return row.name.trim().toLowerCase() === game.playerName.trim().toLowerCase();
+        }
+        return false;
+      }
 
       function playTone(type) {
         if (!game.soundOn) return;
@@ -1208,21 +1338,30 @@
               '<p class="ag-menu-sub">Тоглох бүрт асуултын дараалал автоматаар холигдоно.</p>' +
             '</div>' +
             '<div class="ag-modes">' +
-              '<button type="button" class="ag-mode-btn" data-mode="emoji"' + (emojiCount === 0 ? ' disabled' : '') + '>' +
-                '<span class="ag-mode-icon" aria-hidden="true">🎭</span>' +
-                '<span class="ag-mode-name">Emoji</span>' +
-                '<span class="ag-mode-desc">Emoji харж анимийг таана · ' + emojiCount + ' асуулт</span>' +
-              '</button>' +
-              '<button type="button" class="ag-mode-btn" data-mode="anime"' + (animeCount === 0 ? ' disabled' : '') + '>' +
-                '<span class="ag-mode-icon" aria-hidden="true">🖼️</span>' +
-                '<span class="ag-mode-name">Anime</span>' +
-                '<span class="ag-mode-desc">Бүдэг зураг 3 сек тутам тодорно · ' + animeCount + ' асуулт</span>' +
-              '</button>' +
-              '<button type="button" class="ag-mode-btn" data-mode="character"' + (charCount === 0 ? ' disabled' : '') + '>' +
-                '<span class="ag-mode-icon" aria-hidden="true">⚡</span>' +
-                '<span class="ag-mode-name">Баатар</span>' +
-                '<span class="ag-mode-desc">Баатрын зургаар нэрийг таана · ' + charCount + ' баатар</span>' +
-              '</button>' +
+              '<div class="ag-mode-col">' +
+                '<button type="button" class="ag-mode-btn" data-mode="emoji"' + (emojiCount === 0 ? ' disabled' : '') + '>' +
+                  '<span class="ag-mode-icon" aria-hidden="true">🎭</span>' +
+                  '<span class="ag-mode-name">Emoji</span>' +
+                  '<span class="ag-mode-desc">Emoji харж анимийг таана · ' + emojiCount + ' асуулт</span>' +
+                '</button>' +
+                '<div class="ag-mini-board" data-board-mode="Emoji"></div>' +
+              '</div>' +
+              '<div class="ag-mode-col">' +
+                '<button type="button" class="ag-mode-btn" data-mode="anime"' + (animeCount === 0 ? ' disabled' : '') + '>' +
+                  '<span class="ag-mode-icon" aria-hidden="true">🖼️</span>' +
+                  '<span class="ag-mode-name">Anime</span>' +
+                  '<span class="ag-mode-desc">Бүдэг зураг 3 сек тутам тодорно · ' + animeCount + ' асуулт</span>' +
+                '</button>' +
+                '<div class="ag-mini-board" data-board-mode="Anime"></div>' +
+              '</div>' +
+              '<div class="ag-mode-col">' +
+                '<button type="button" class="ag-mode-btn" data-mode="character"' + (charCount === 0 ? ' disabled' : '') + '>' +
+                  '<span class="ag-mode-icon" aria-hidden="true">⚡</span>' +
+                  '<span class="ag-mode-name">Баатар</span>' +
+                  '<span class="ag-mode-desc">Баатрын зургаар нэрийг таана · ' + charCount + ' баатар</span>' +
+                '</button>' +
+                '<div class="ag-mini-board" data-board-mode="Баатар"></div>' +
+              '</div>' +
             '</div>' +
             '<div class="ag-rules-line">Асуулт бүрт 15 секунд · 3 амьтай · Зөв хариу +10 оноо</div>' +
           '</div>';
@@ -1232,6 +1371,70 @@
             startGame(btn.dataset.mode);
           });
         });
+
+        paintMenuBoards();
+        loadLeaderboards(false);
+      }
+
+      function paintMenuBoards() {
+        const boards = agBody.querySelectorAll('.ag-mini-board[data-board-mode]');
+        if (!boards.length) return;
+        boards.forEach(function(el) {
+          const modeName = el.dataset.boardMode;
+          if (!game.leaderboards) {
+            const emptyMsg = game.leaderboardsError ? 'Жагсаалт уншиж чадсангүй.' : 'Уншиж байна...';
+            el.innerHTML = '<div class="ag-mini-title"><span>🏆 ' + escapeHtml(modeName) + ' оноо</span></div><div class="ag-mini-empty">' + emptyMsg + '</div>';
+            return;
+          }
+          const rows = (game.leaderboards[modeName] || []).slice(0, 5);
+          if (!rows.length) {
+            el.innerHTML = '<div class="ag-mini-title"><span>🏆 ' + escapeHtml(modeName) + ' оноо</span></div><div class="ag-mini-empty">Хадгалсан оноо алга</div>';
+            return;
+          }
+          const rowsHtml = rows.map(function(row, idx) {
+            const isMine = isMyRow(row);
+            return (
+              '<div class="ag-mini-row' + (isMine ? ' is-mine' : '') + '">' +
+                '<span class="ag-mini-name"><span class="ag-mini-rank">' + (idx + 1) + '.</span>' + escapeHtml(row.name) + '</span>' +
+                '<span class="ag-mini-score">' + row.score + ' оноо</span>' +
+              '</div>'
+            );
+          }).join('');
+          el.innerHTML = '<div class="ag-mini-title"><span>🏆 ' + escapeHtml(modeName) + ' оноо</span></div>' + rowsHtml;
+        });
+      }
+
+      function refreshVisibleBoards() {
+        paintMenuBoards();
+        const activeBoard = document.getElementById('ag-play-board');
+        if (activeBoard && game.mode) {
+          renderModeLeaderboard(activeBoard, getModeLabel(game.mode));
+        }
+        const endBoard = document.getElementById('ag-board');
+        if (endBoard && game.mode) {
+          renderModeLeaderboard(endBoard, getModeLabel(game.mode));
+        }
+      }
+
+      function loadLeaderboards(force) {
+        if (!window.AnimeGuessScores || !window.AnimeGuessScores.fetchLeaderboardsByMode) return Promise.resolve(null);
+        if (game.leaderboards && !force) {
+          refreshVisibleBoards();
+          return Promise.resolve(game.leaderboards);
+        }
+        game.leaderboardsError = false;
+        return window.AnimeGuessScores.fetchLeaderboardsByMode(5)
+          .then(function(data) {
+            game.leaderboards = data;
+            game.leaderboardsError = false;
+            refreshVisibleBoards();
+            return data;
+          })
+          .catch(function() {
+            game.leaderboardsError = true;
+            refreshVisibleBoards();
+            return null;
+          });
       }
 
       function startGame(mode) {
@@ -1244,6 +1447,9 @@
         game.answeredCount = 0;
         game.index = 0;
         game.timeLeft = QUESTION_SECONDS;
+        game.lastSavedId = null;
+
+        if (!game.leaderboards) loadLeaderboards(false);
 
         if (mode === 'emoji') {
           game.deck = shuffle(game.questions.filter(function(q) { return Boolean(q.emoji); }));
@@ -1359,7 +1565,11 @@
             '<div class="ag-stage-box">' + stageHtml + '</div>' +
             '<div class="ag-options" id="ag-options">' + optionsHtml + '</div>' +
             '<div class="ag-feedback is-idle" id="ag-feedback">Зөв хариултыг 15 секундийн дотор сонгоно уу.</div>' +
+            '<div class="ag-board ag-play-board" id="ag-play-board"></div>' +
           '</div>';
+
+        const playBoard = document.getElementById('ag-play-board');
+        renderModeLeaderboard(playBoard, modeLabel);
 
         const optionBtns = Array.from(agBody.querySelectorAll('.ag-opt-btn'));
         optionBtns.forEach(function(btn) {
@@ -1467,23 +1677,203 @@
         }, 1500);
       }
 
-      function renderEndScreen(headline) {
+      function renderModeLeaderboard(containerEl, modeLabel) {
+        if (!containerEl) return;
+        const titleText = modeLabel ? ('🏆 ' + modeLabel + ' — Шилдэг тоглогчид') : '🏆 Шилдэг тоглогчид';
+        if (game.leaderboards && modeLabel) {
+          paintLeaderboardRows(containerEl, titleText, game.leaderboards[modeLabel] || []);
+          return;
+        }
+        if (game.leaderboardsError) {
+          containerEl.innerHTML = '<div class="ag-board-title">' + escapeHtml(titleText) + '</div><div class="ag-save-status is-muted">Жагсаалт уншиж чадсангүй.</div>';
+          return;
+        }
+        containerEl.innerHTML = '<div class="ag-board-title">' + escapeHtml(titleText) + '</div><div class="ag-save-status is-muted">Уншиж байна...</div>';
+        if (!window.AnimeGuessScores) return;
+        window.AnimeGuessScores.fetchTopScores(5, modeLabel)
+          .then(function(rows) {
+            paintLeaderboardRows(containerEl, titleText, rows || []);
+          })
+          .catch(function() {
+            containerEl.innerHTML = '<div class="ag-board-title">' + escapeHtml(titleText) + '</div><div class="ag-save-status is-muted">Жагсаалт уншиж чадсангүй.</div>';
+          });
+      }
+
+      function paintLeaderboardRows(containerEl, titleText, rows) {
+        if (!rows || !rows.length) {
+          containerEl.innerHTML = '<div class="ag-board-title">' + escapeHtml(titleText) + '</div><div class="ag-save-status is-muted">Энэ горимд одоогоор хадгалсан оноо алга байна.</div>';
+          return;
+        }
+        const itemsHtml = rows.map(function(row, idx) {
+          const metaParts = [];
+          if (row.createdAt) metaParts.push(row.createdAt);
+          const isMine = isMyRow(row);
+          return (
+            '<div class="ag-board-row' + (isMine ? ' is-mine' : '') + '">' +
+              '<div class="ag-board-left">' +
+                '<span class="ag-board-rank">' + (idx + 1) + '.</span>' +
+                '<span class="ag-board-name">' + escapeHtml(row.name) + '</span>' +
+                (metaParts.length ? '<span class="ag-board-meta">' + escapeHtml(metaParts.join(' · ')) + '</span>' : '') +
+              '</div>' +
+              '<span class="ag-board-score">' + row.score + ' оноо</span>' +
+            '</div>'
+          );
+        }).join('');
+        containerEl.innerHTML =
+          '<div class="ag-board-title">' + escapeHtml(titleText) + '</div>' +
+          '<div class="ag-board-list">' + itemsHtml + '</div>';
+      }
+
+      function renderEndScreen(headline, silent) {
         clearGameTimers();
         game.view = 'GAME_OVER';
-        playTone('end');
+        if (!silent) playTone('end');
         updateHud();
 
         const modeLabel = getModeLabel(game.mode);
+        let savedThisRound = false;
+        let savingInFlight = false;
+        const hasSavedName = Boolean(game.playerName);
+
+        const saveSectionHtml = hasSavedName
+          ? '<div class="ag-saved-bar" id="ag-saved-bar">' +
+              '<div class="ag-save-status is-muted" id="ag-save-status">Тоглогч: <b>' + escapeHtml(game.playerName) + '</b> — оноо хадгалж байна...</div>' +
+              '<button type="button" class="ag-change-name-btn" id="ag-change-name-btn">Нэр солих</button>' +
+            '</div>'
+          : '<form class="ag-save-box" id="ag-save-form">' +
+              '<label class="ag-save-label" for="ag-player-name">Оноогоо хадгалах уу? Тоглогчийн нэрээ бичнэ үү:</label>' +
+              '<div class="ag-save-form">' +
+                '<input type="text" id="ag-player-name" class="ag-input" maxlength="40" placeholder="Таны нэр..." autocomplete="name" required />' +
+                '<button type="submit" class="ag-save-btn" id="ag-save-btn">Оноо хадгалах</button>' +
+              '</div>' +
+              '<div class="ag-save-status is-muted" id="ag-save-status"></div>' +
+            '</form>';
+
         agBody.innerHTML =
           '<div class="ag-end">' +
             '<h2 class="ag-end-title">' + escapeHtml(headline || 'Тоглоом дууслаа!') + '</h2>' +
             '<div class="ag-final-score">' + game.score + ' оноо</div>' +
-            '<div class="ag-end-stats">Горим: ' + escapeHtml(modeLabel) + ' · Зөв хариулт: ' + game.correctCount + ' / ' + game.answeredCount + ' · Үлдсэн амь: ' + game.lives + '/' + MAX_LIVES + '</div>' +
+            '<div class="ag-end-stats">Тоглоом: Anime Guess · Горим: ' + escapeHtml(modeLabel) + ' · Зөв: ' + game.correctCount + '/' + game.answeredCount + ' · Амь: ' + game.lives + '/' + MAX_LIVES + '</div>' +
+            saveSectionHtml +
+            '<div class="ag-board" id="ag-board"></div>' +
             '<div class="ag-end-actions">' +
               '<button type="button" class="ag-btn-primary" id="ag-replay-btn">Дахин тоглох</button>' +
               '<button type="button" class="ag-btn-secondary" id="ag-switch-mode-btn">Горим солих</button>' +
             '</div>' +
           '</div>';
+
+        const saveForm = document.getElementById('ag-save-form');
+        const nameInput = document.getElementById('ag-player-name');
+        const saveBtn = document.getElementById('ag-save-btn');
+        const saveStatus = document.getElementById('ag-save-status');
+        const changeNameBtn = document.getElementById('ag-change-name-btn');
+        const boardEl = document.getElementById('ag-board');
+
+        if (nameInput) {
+          setTimeout(function() {
+            try { nameInput.focus(); } catch (e) {}
+          }, 50);
+        }
+
+        renderModeLeaderboard(boardEl, modeLabel);
+
+        function submitPlayerScore(playerName, isAuto) {
+          if (savedThisRound || savingInFlight) return;
+          if (!window.AnimeGuessScores) {
+            if (saveStatus && !isAuto) {
+              saveStatus.className = 'ag-save-status is-err';
+              saveStatus.textContent = 'Firebase холболт бэлэн болж байна, түр хүлээгээд дахин оролдоно уу.';
+            }
+            return;
+          }
+          savingInFlight = true;
+          if (saveBtn) {
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Хадгалж байна...';
+          }
+          if (saveStatus) {
+            saveStatus.className = 'ag-save-status is-muted';
+            saveStatus.textContent = isAuto
+              ? ('Тоглогч: ' + playerName + ' — оноо хадгалж байна...')
+              : 'Firestore руу илгээж байна...';
+          }
+
+          window.AnimeGuessScores.saveScore({
+            name: playerName,
+            score: game.score,
+            mode: modeLabel
+          })
+            .then(function(docId) {
+              savingInFlight = false;
+              savedThisRound = true;
+              game.lastSavedId = docId;
+              rememberPlayerName(playerName);
+
+              if (saveForm) {
+                saveForm.outerHTML =
+                  '<div class="ag-saved-bar" id="ag-saved-bar">' +
+                    '<div class="ag-save-status is-ok" id="ag-save-status">✓ ' + escapeHtml(playerName) + ': Таны оноо хадгалагдлаа!</div>' +
+                  '</div>';
+              } else if (saveStatus) {
+                saveStatus.className = 'ag-save-status is-ok';
+                saveStatus.textContent = '✓ ' + playerName + ': Таны оноо хадгалагдлаа!';
+              }
+              loadLeaderboards(true);
+            })
+            .catch(function(err) {
+              savingInFlight = false;
+              if (saveBtn) {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Оноо хадгалах';
+              }
+              if (saveStatus) {
+                saveStatus.className = 'ag-save-status is-err';
+                let msg = 'Хадгалахад алдаа гарлаа.';
+                if (err && err.message && err.message.indexOf('Quota exceeded') !== -1) {
+                  msg = 'Firestore өдрийн хязгаарт хүрсэн байна.';
+                }
+                saveStatus.textContent = msg;
+              }
+            });
+        }
+
+        if (hasSavedName) {
+          if (window.AnimeGuessScores) {
+            submitPlayerScore(game.playerName, true);
+          } else {
+            window.addEventListener('anime-scores-ready', function onScoresReadyForSave() {
+              window.removeEventListener('anime-scores-ready', onScoresReadyForSave);
+              if (game.view === 'GAME_OVER' && game.playerName) {
+                submitPlayerScore(game.playerName, true);
+              }
+            });
+          }
+        }
+
+        if (changeNameBtn) {
+          changeNameBtn.addEventListener('click', function() {
+            rememberPlayerName('');
+            renderEndScreen(headline, true);
+          });
+        }
+
+        if (saveForm) {
+          saveForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (savedThisRound) return;
+
+            const playerName = nameInput ? nameInput.value.trim() : '';
+            if (!playerName) {
+              if (saveStatus) {
+                saveStatus.className = 'ag-save-status is-err';
+                saveStatus.textContent = 'Тоглогчийн нэрээ оруулна уу.';
+              }
+              if (nameInput) nameInput.focus();
+              return;
+            }
+            submitPlayerScore(playerName, false);
+          });
+        }
 
         const replayBtn = document.getElementById('ag-replay-btn');
         const switchBtn = document.getElementById('ag-switch-mode-btn');
@@ -1578,8 +1968,14 @@
         }
       });
 
-      // Preload data.json quietly in background
+      // Preload data.json and leaderboards quietly in background
       loadData();
+      window.addEventListener('anime-scores-ready', function() {
+        loadLeaderboards(false);
+      });
+      if (window.AnimeGuessScores) {
+        loadLeaderboards(false);
+      }
     })();
   </script>
 </body>

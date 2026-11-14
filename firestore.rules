@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isValidScore(data) {
+      return data.keys().hasAll(['name', 'score', 'game', 'mode', 'createdAt'])
+        && data.keys().hasOnly(['name', 'score', 'game', 'mode', 'createdAt'])
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 40
+        && data.score is int && data.score >= 0 && data.score <= 2000
+        && data.game is string && data.game.size() <= 30 && data.game == 'Anime Guess'
+        && data.mode is string && data.mode.size() <= 20 && data.mode in ['Emoji', 'Anime', 'Баатар']
+        && data.createdAt is timestamp && data.createdAt == request.time;
+    }
+
+    match /scores/{scoreId} {
+      allow get: if isValidId(scoreId);
+      allow list: if resource.data.score >= 0;
+      allow create: if isValidId(scoreId) && isValidScore(incoming());
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}

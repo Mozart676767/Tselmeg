@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "ScoreEntry": {
+      "title": "ScoreEntry",
+      "description": "A single player score record submitted upon completing an Anime Guess round.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Player display name entered at game completion.",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "score": {
+          "type": "integer",
+          "description": "Final numeric score achieved in the round."
+        },
+        "game": {
+          "type": "string",
+          "description": "Name of the game played.",
+          "enum": ["Anime Guess"],
+          "maxLength": 30
+        },
+        "mode": {
+          "type": "string",
+          "description": "Game mode played (Emoji, Anime, or Баатар).",
+          "enum": ["Emoji", "Anime", "Баатар"],
+          "maxLength": 20
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the score was recorded."
+        }
+      },
+      "required": ["name", "score", "game", "mode", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/scores/{scoreId}": {
+      "schema": {
+        "$ref": "#/entities/ScoreEntry"
+      },
+      "description": "Stores immutable player score records for Anime Guess."
+    }
+  }
+}
