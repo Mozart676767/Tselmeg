@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#night)"/>
+  <!-- Traditional Spirit Bathhouse Bridge & Lanterns -->
+  <rect x="195" y="65" width="210" height="260" fill="#7f1d1d"/>
+  <path d="M165 75 L300 28 L435 75 Z" fill="#0f172a"/>
+  <path d="M175 155 L425 155 L415 172 L185 172 Z" fill="#0f172a"/>
+  <rect x="235" y="185" width="130" height="90" fill="#fef08a" opacity="0.85"/>
+  <!-- Red Arch Bridge -->
+  <path d="M0 340 Q300 275 600 340 L600 385 Q300 320 0 385 Z" fill="#dc2626"/>
+  <rect y="365" width="600" height="85" fill="#0c4a6e" opacity="0.85"/>
+  <!-- Spirit Masked Figure (No-Face) -->
+  <path d="M250 440 C250 265 270 220 300 220 C330 220 350 265 350 440 Z" fill="#09090b"/>
+  <ellipse cx="300" cy="260" rx="28" ry="38" fill="#f8fafc"/>
+  <ellipse cx="288" cy="256" rx="5" ry="3.5" fill="#18181b"/>
+  <ellipse cx="312" cy="256" rx="5" ry="3.5" fill="#18181b"/>
+  <path d="M286 276 Q300 282 314 276" fill="none" stroke="#18181b" stroke-width="3"/>
+  <polygon points="288,236 293,247 283,247" fill="#9333ea"/>
+  <polygon points="312,236 317,247 307,247" fill="#9333ea"/>
+</svg>

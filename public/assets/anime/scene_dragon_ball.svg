@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#090d1e"/>
+      <stop offset="65%" stop-color="#311042"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="45%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#sky)"/>
+  <!-- Golden Dragon Beam -->
+  <path d="M270 360 Q290 220 265 110 Q300 45 340 110 Q315 220 330 360 Z" fill="#fde047" opacity="0.35"/>
+  <!-- Rocky Canyon Silhouette -->
+  <path d="M0 450 L0 315 L95 275 L155 345 L245 320 L355 320 L445 345 L515 268 L600 310 L600 450 Z" fill="#1c121e"/>
+  <!-- Glowing 4-Star Dragon Sphere -->
+  <circle cx="300" cy="215" r="88" fill="#fbbf24" opacity="0.28"/>
+  <circle cx="300" cy="215" r="68" fill="url(#orb)" stroke="#fde047" stroke-width="3"/>
+  <ellipse cx="275" cy="182" rx="18" ry="10" transform="rotate(-30 275 182)" fill="#ffffff" opacity="0.55"/>
+  <!-- 4 Red Stars -->
+  <g fill="#dc2626">
+    <polygon points="282,190 285,198 294,198 287,203 289,211 282,206 275,211 277,203 270,198 279,198"/>
+    <polygon points="318,190 321,198 330,198 323,203 325,211 318,206 311,211 313,203 306,198 315,198"/>
+    <polygon points="282,226 285,234 294,234 287,239 289,247 282,242 275,247 277,239 270,234 279,234"/>
+    <polygon points="318,226 321,234 330,234 323,239 325,247 318,242 311,247 313,239 306,234 315,234"/>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="65%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#sky)"/>
+  <circle cx="490" cy="85" r="44" fill="#fef08a"/>
+  <ellipse cx="140" cy="90" rx="75" ry="26" fill="#fff" opacity="0.85"/>
+  <ellipse cx="185" cy="82" rx="45" ry="22" fill="#fff" opacity="0.9"/>
+  <ellipse cx="410" cy="120" rx="65" ry="22" fill="#fff" opacity="0.75"/>
+  <!-- Pirate Ship -->
+  <rect x="292" y="108" width="12" height="195" fill="#78350f"/>
+  <rect x="215" y="155" width="166" height="8" rx="4" fill="#78350f"/>
+  <!-- Main White Sail with Strawhat Skull Icon -->
+  <path d="M218 162 Q298 145 378 162 Q390 220 374 268 Q298 258 222 268 Q206 220 218 162 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+  <!-- Skull & Straw Hat on Sail -->
+  <line x1="268" y1="192" x2="328" y2="242" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
+  <line x1="328" y1="192" x2="268" y2="242" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="298" cy="216" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+  <circle cx="290" cy="215" r="5" fill="#1e293b"/>
+  <circle cx="306" cy="215" r="5" fill="#1e293b"/>
+  <ellipse cx="298" cy="197" rx="34" ry="8" fill="#facc15" stroke="#1e293b" stroke-width="3"/>
+  <path d="M278 196 C280 176 316 176 318 196 Z" fill="#facc15" stroke="#1e293b" stroke-width="3"/>
+  <path d="M279 190 Q298 195 317 190 L318 196 Q298 200 278 196 Z" fill="#dc2626"/>
+  <!-- Ship Hull -->
+  <path d="M160 288 L430 288 L398 355 L196 355 Z" fill="#92400e" stroke="#451a03" stroke-width="4"/>
+  <path d="M148 288 L442 288 L434 304 L156 304 Z" fill="#b45309" stroke="#451a03" stroke-width="3"/>
+  <!-- Sheep-like figurehead bow -->
+  <circle cx="436" cy="285" r="18" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+  <!-- Ocean Waves -->
+  <rect y="335" width="600" height="115" fill="url(#ocean)"/>
+  <path d="M0 340 Q60 322 120 340 T240 340 T360 340 T480 340 T600 340" fill="none" stroke="#7dd3fc" stroke-width="6"/>
+  <path d="M-30 375 Q45 358 120 375 T270 375 T420 375 T570 375" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.65"/>
+</svg>

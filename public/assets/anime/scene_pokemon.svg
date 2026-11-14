@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="65%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#sky)"/>
+  <!-- Rolling Green Hills -->
+  <path d="M0 320 Q150 260 320 315 T600 295 L600 450 L0 450 Z" fill="#16a34a"/>
+  <path d="M0 365 Q220 330 420 365 T600 350 L600 450 L0 450 Z" fill="#15803d"/>
+  <!-- Electric Yellow Sparks -->
+  <polygon points="150,150 185,120 170,165 205,155 160,210 172,175 135,180" fill="#fde047"/>
+  <polygon points="445,140 420,175 442,175 412,225 460,180 438,180" fill="#fde047"/>
+  <!-- Classic Red-White Capture Sphere -->
+  <circle cx="300" cy="215" r="105" fill="#ffffff" stroke="#18181b" stroke-width="10"/>
+  <path d="M195 215 A105 105 0 0 1 405 215 Z" fill="#dc2626" stroke="#18181b" stroke-width="10"/>
+  <rect x="193" y="205" width="214" height="20" fill="#18181b"/>
+  <circle cx="300" cy="215" r="32" fill="#ffffff" stroke="#18181b" stroke-width="10"/>
+  <circle cx="300" cy="215" r="14" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3"/>
+</svg>

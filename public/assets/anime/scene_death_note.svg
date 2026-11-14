@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#3f0d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg)"/>
+  <!-- Black Notebook -->
+  <g transform="rotate(-12 290 230)">
+    <rect x="200" y="95" width="180" height="245" rx="6" fill="#18181b" stroke="#52525b" stroke-width="4"/>
+    <rect x="200" y="95" width="18" height="245" rx="3" fill="#09090b"/>
+    <text x="298" y="168" text-anchor="middle" font-family="serif" font-size="24" font-weight="700" fill="#e4e4e7" letter-spacing="3">NOTE</text>
+    <line x1="238" y1="186" x2="358" y2="186" stroke="#a1a1aa" stroke-width="2"/>
+  </g>
+  <!-- Red Shiny Apple -->
+  <circle cx="385" cy="300" r="44" fill="#dc2626"/>
+  <ellipse cx="370" cy="282" rx="12" ry="7" transform="rotate(-25 370 282)" fill="#fca5a5" opacity="0.6"/>
+  <path d="M385 258 Q390 238 402 234" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="404" cy="242" rx="14" ry="7" transform="rotate(20 404 242)" fill="#16a34a"/>
+  <!-- Feather Quill -->
+  <path d="M165 345 L245 215 Q268 180 280 150 Q255 185 225 220 Z" fill="#f8fafc"/>
+</svg>

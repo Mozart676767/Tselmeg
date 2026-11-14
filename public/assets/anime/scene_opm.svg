@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="55%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg)"/>
+  <!-- Action Speed Lines -->
+  <g stroke="#fef08a" stroke-width="5" opacity="0.45">
+    <line x1="0" y1="60" x2="260" y2="205"/>
+    <line x1="0" y1="180" x2="250" y2="220"/>
+    <line x1="0" y1="320" x2="260" y2="245"/>
+    <line x1="600" y1="70" x2="350" y2="200"/>
+    <line x1="600" y1="350" x2="360" y2="245"/>
+  </g>
+  <!-- White Cape -->
+  <path d="M180 450 L235 280 L365 280 L420 450 Z" fill="#f8fafc"/>
+  <!-- Yellow Hero Suit -->
+  <path d="M210 450 C215 320 245 285 300 285 C355 285 385 320 390 450 Z" fill="#facc15" stroke="#18181b" stroke-width="4"/>
+  <!-- Bald Shiny Head -->
+  <ellipse cx="300" cy="215" rx="64" ry="76" fill="#ffdbb8" stroke="#18181b" stroke-width="4"/>
+  <ellipse cx="274" cy="166" rx="18" ry="9" transform="rotate(-25 274 166)" fill="#ffffff" opacity="0.75"/>
+  <!-- Simple Deadpan Eyes -->
+  <ellipse cx="278" cy="212" rx="9" ry="6" fill="#ffffff" stroke="#18181b" stroke-width="2.5"/>
+  <circle cx="278" cy="212" r="2.5" fill="#18181b"/>
+  <ellipse cx="322" cy="212" rx="9" ry="6" fill="#ffffff" stroke="#18181b" stroke-width="2.5"/>
+  <circle cx="322" cy="212" r="2.5" fill="#18181b"/>
+  <line x1="290" y1="252" x2="310" y2="252" stroke="#18181b" stroke-width="3" stroke-linecap="round"/>
+  <!-- Giant Red Glove Punch -->
+  <circle cx="430" cy="260" r="68" fill="#dc2626" stroke="#18181b" stroke-width="5"/>
+  <path d="M385 245 L455 245 M395 272 L455 272" stroke="#991b1b" stroke-width="5" stroke-linecap="round"/>
+</svg>

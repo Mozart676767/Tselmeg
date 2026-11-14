@@ -103,20 +103,19 @@
     .links{display:flex; align-items:center}
     .links a{position:relative; display:flex; align-items:center; height:calc(86 * var(--u));
       font-size:calc(18.4 * var(--u)); font-weight:400; line-height:1; color:#fff;
-      text-decoration:none; padding:0 calc(17.5 * var(--u));
-      letter-spacing:calc(-1 * var(--u)); white-space:nowrap}
+      text-decoration:none; padding:0 calc(16 * var(--u));
+      letter-spacing:calc(-0.3 * var(--u)); white-space:nowrap}
     .links a[aria-current="page"]::after{content:""; position:absolute; left:0; right:0;
       top:calc(83.5 * var(--u)); height:calc(4 * var(--u)); background:var(--cyan);
       border-radius:calc(1 * var(--u)); transform-origin:center}
-    .links a:nth-child(3){letter-spacing:calc(-1.75 * var(--u))}
-    .links a:nth-child(2){margin-left:calc(24 * var(--u))}
-    .links a:nth-child(3){margin-left:calc(26 * var(--u))}
-    .links a:nth-child(4){margin-left:calc(27 * var(--u))}
-    .links a.enroll{margin-left:calc(28.5 * var(--u)); width:calc(107 * var(--u));
+    .links a:nth-child(2){margin-left:calc(20 * var(--u))}
+    .links a:nth-child(3){margin-left:calc(20 * var(--u))}
+    .links a:nth-child(4){margin-left:calc(20 * var(--u))}
+    .links a.enroll{margin-left:calc(24 * var(--u)); min-width:calc(107 * var(--u)); padding:calc(2 * var(--u)) calc(18 * var(--u)) 0;
       height:calc(38 * var(--u)); border-radius:calc(19 * var(--u)); display:flex;
-      align-items:center; justify-content:center; font-size:calc(17 * var(--u));
-      font-weight:600; letter-spacing:calc(-0.75 * var(--u)); line-height:1;
-      color:var(--btn-ink); text-decoration:none; padding-top:calc(2 * var(--u));
+      align-items:center; justify-content:center; font-size:calc(16.5 * var(--u));
+      font-weight:600; letter-spacing:calc(-0.3 * var(--u)); line-height:1;
+      color:var(--btn-ink); text-decoration:none;
       background:linear-gradient(180deg,#ffffff 0%,#d8ecfe 9%,#dceefe 72%,#f4f9ff 100%);
       box-shadow:0 calc(3 * var(--u)) calc(14 * var(--u)) rgba(255,255,255,.22),
                  inset 0 0 0 calc(1.5 * var(--u)) rgba(255,255,255,.92);
@@ -357,6 +356,270 @@
     .anim.play .label.label-r{--rise:calc(8 * var(--u)); animation:ent-rise .6s var(--e-quint) 1.10s both}
     .anim.play .cta a{--rise:calc(8 * var(--u)); animation:ent-settle .7s var(--e-quint) 1.14s both}
     .anim.play .scroll{animation:ent-settle .6s var(--e-quint) 1.42s both}
+
+    /* PORTFOLIO / GAME MODE TOGGLE */
+    body.mode-game .copy,
+    body.mode-game .scroll{
+      opacity:0; visibility:hidden; pointer-events:none;
+      transition:opacity .22s ease, visibility .22s ease;
+    }
+    .copy,.scroll{transition:opacity .22s ease, visibility .22s ease}
+
+    /* ANIME GUESS GAME */
+    .anime-game{
+      position:absolute; inset:calc(88 * var(--u)) 0 0 0; z-index:4;
+      display:none; align-items:center; justify-content:center;
+      padding:20px 20px 28px; overflow-y:auto;
+    }
+    body.mode-game .anime-game{display:flex}
+    .ag-card{
+      width:100%; max-width:740px;
+      background:rgba(7, 17, 36, 0.86);
+      backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+      border:1px solid rgba(121, 220, 232, 0.28);
+      border-radius:24px; padding:24px 28px 28px;
+      box-shadow:0 24px 64px rgba(2, 8, 22, 0.68);
+      color:#ffffff; display:flex; flex-direction:column; gap:18px;
+      margin:auto;
+    }
+    .ag-topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding-bottom:14px;
+      border-bottom:1px solid rgba(255, 255, 255, 0.12);
+      flex-wrap:wrap;
+    }
+    .ag-brand-left{display:flex; align-items:center; gap:12px}
+    .ag-back-btn{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:8px 14px; border-radius:10px;
+      background:rgba(255, 255, 255, 0.07);
+      border:1px solid rgba(255, 255, 255, 0.16);
+      color:#e2e8f0; font-family:var(--font-body); font-size:14px; font-weight:600;
+      cursor:pointer; white-space:nowrap;
+      transition:background .16s ease, border-color .16s ease, transform .16s ease;
+    }
+    .ag-back-btn:hover{background:rgba(255,255,255,0.14); border-color:rgba(121,220,232,0.55); transform:translateY(-1px)}
+    .ag-title{
+      font-family:var(--font-serif); font-size:22px; font-weight:400;
+      letter-spacing:0.4px; color:#ffffff; margin:0;
+    }
+    .ag-hud{
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    }
+    .ag-hud-item{
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:14px; font-weight:600; color:#cbd5e1;
+      font-variant-numeric:tabular-nums;
+    }
+    .ag-hud-val{color:#ffffff; font-weight:700; font-size:15px}
+    .ag-hud-val.is-cyan{color:var(--cyan)}
+    .ag-hud-val.is-warn{color:#fbbf24}
+    .ag-hud-val.is-danger{color:#f87171}
+    .ag-hud-sep{color:rgba(255,255,255,0.22)}
+    .ag-sound-btn{
+      width:36px; height:36px; border-radius:10px;
+      background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14);
+      color:#e2e8f0; font-size:16px; display:inline-flex;
+      align-items:center; justify-content:center; cursor:pointer;
+      transition:background .16s ease;
+    }
+    .ag-sound-btn:hover{background:rgba(255,255,255,0.15)}
+
+    /* MENU VIEW */
+    .ag-menu{display:flex; flex-direction:column; gap:20px; padding:8px 0 4px}
+    .ag-menu-head{text-align:center; display:flex; flex-direction:column; gap:8px}
+    .ag-menu-head h2{
+      font-family:var(--font-serif); font-size:clamp(24px, 3vw, 32px);
+      font-weight:400; color:#ffffff; text-wrap:balance;
+    }
+    .ag-menu-sub{font-size:15px; color:rgba(226, 232, 240, 0.78); line-height:1.5}
+    .ag-modes{
+      display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:14px;
+    }
+    .ag-mode-btn{
+      display:flex; flex-direction:column; align-items:flex-start; gap:10px;
+      padding:20px 18px; border-radius:16px; text-align:left;
+      background:rgba(15, 29, 58, 0.72);
+      border:1px solid rgba(255, 255, 255, 0.14);
+      color:#ffffff; cursor:pointer; font-family:var(--font-body);
+      transition:transform .18s cubic-bezier(.16,1,.3,1), border-color .18s ease, background .18s ease;
+      min-height:132px;
+    }
+    .ag-mode-btn:hover:not(:disabled){
+      transform:translateY(-3px);
+      border-color:rgba(121, 220, 232, 0.8);
+      background:rgba(20, 44, 84, 0.88);
+    }
+    .ag-mode-btn:disabled{opacity:0.45; cursor:not-allowed}
+    .ag-mode-icon{
+      width:44px; height:44px; border-radius:12px;
+      background:rgba(121, 220, 232, 0.14);
+      border:1px solid rgba(121, 220, 232, 0.35);
+      display:flex; align-items:center; justify-content:center;
+      font-size:22px;
+    }
+    .ag-mode-name{font-size:18px; font-weight:700; color:#ffffff}
+    .ag-mode-desc{font-size:13.5px; line-height:1.45; color:rgba(226, 232, 240, 0.78)}
+    .ag-rules-line{
+      text-align:center; font-size:13px; color:rgba(203, 213, 225, 0.72);
+      padding-top:4px;
+    }
+
+    /* PLAY VIEW */
+    .ag-play{display:flex; flex-direction:column; gap:16px}
+    .ag-meta-row{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px; font-size:13.5px; color:rgba(203, 213, 225, 0.85);
+      font-variant-numeric:tabular-nums;
+    }
+    .ag-timer-track{
+      width:100%; height:6px; border-radius:999px;
+      background:rgba(255, 255, 255, 0.12); overflow:hidden;
+    }
+    .ag-timer-fill{
+      height:100%; width:100%; border-radius:999px;
+      background:var(--cyan);
+      transition:width .35s linear, background-color .25s ease;
+    }
+    .ag-timer-fill.is-warn{background:#f59e0b}
+    .ag-timer-fill.is-danger{background:#ef4444}
+    .ag-stage-box{
+      width:100%; min-height:220px; border-radius:18px;
+      background:rgba(4, 11, 24, 0.72);
+      border:1px solid rgba(255, 255, 255, 0.12);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:20px; position:relative; overflow:hidden; gap:12px;
+    }
+    .ag-emoji-display{
+      font-size:clamp(46px, 8vw, 76px); line-height:1.2;
+      letter-spacing:0.12em; text-align:center; user-select:none;
+    }
+    .ag-prompt-label{
+      font-size:15px; font-weight:600; color:rgba(226, 232, 240, 0.88);
+    }
+    .ag-img-wrap{
+      width:100%; max-width:380px; aspect-ratio:4 / 3;
+      border-radius:14px; overflow:hidden;
+      border:1px solid rgba(255, 255, 255, 0.14);
+      background:#0b1730; position:relative;
+    }
+    .ag-img-wrap.is-character{
+      max-width:230px; aspect-ratio:1 / 1; border-radius:16px;
+    }
+    .ag-img{
+      width:100%; height:100%; object-fit:cover; display:block;
+      transition:filter .45s ease, transform .45s ease;
+    }
+    .ag-blur-note{
+      font-size:13px; font-weight:600; color:var(--cyan);
+      font-variant-numeric:tabular-nums;
+    }
+    .ag-options{
+      display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px;
+    }
+    .ag-opt-btn{
+      display:flex; align-items:center; gap:12px;
+      padding:14px 16px; min-height:52px; border-radius:14px;
+      background:rgba(15, 30, 60, 0.72);
+      border:1.5px solid rgba(255, 255, 255, 0.16);
+      color:#f8fafc; font-family:var(--font-body); font-size:15.5px; font-weight:600;
+      text-align:left; cursor:pointer;
+      transition:transform .16s ease, background .16s ease, border-color .16s ease;
+    }
+    .ag-opt-btn:hover:not(:disabled){
+      background:rgba(25, 52, 96, 0.88);
+      border-color:rgba(121, 220, 232, 0.72);
+      transform:translateY(-1px);
+    }
+    .ag-opt-btn:disabled{cursor:default}
+    .ag-opt-key{
+      width:28px; height:28px; border-radius:8px; flex:none;
+      background:rgba(255, 255, 255, 0.08);
+      display:inline-flex; align-items:center; justify-content:center;
+      font-size:13px; font-weight:700; color:var(--cyan);
+    }
+    .ag-opt-text{flex:1; min-width:0; line-height:1.3}
+    .ag-opt-mark{font-size:16px; font-weight:700; flex:none}
+    .ag-opt-btn.is-correct{
+      background:rgba(16, 185, 129, 0.24);
+      border-color:#10b981; color:#ecfdf5;
+    }
+    .ag-opt-btn.is-correct .ag-opt-key{background:#10b981; color:#052e16}
+    .ag-opt-btn.is-wrong{
+      background:rgba(239, 68, 68, 0.24);
+      border-color:#ef4444; color:#fef2f2;
+    }
+    .ag-opt-btn.is-wrong .ag-opt-key{background:#ef4444; color:#ffffff}
+
+    .ag-feedback{
+      min-height:44px; padding:10px 14px; border-radius:12px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      font-size:14.5px; font-weight:600;
+    }
+    .ag-feedback.is-idle{
+      background:rgba(255, 255, 255, 0.04); color:rgba(203, 213, 225, 0.75);
+    }
+    .ag-feedback.is-correct{
+      background:rgba(16, 185, 129, 0.18); border:1px solid rgba(16, 185, 129, 0.5); color:#a7f3d0;
+    }
+    .ag-feedback.is-wrong{
+      background:rgba(239, 68, 68, 0.18); border:1px solid rgba(239, 68, 68, 0.5); color:#fecaca;
+    }
+
+    /* END VIEW */
+    .ag-end{
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+      gap:16px; padding:14px 4px 6px;
+    }
+    .ag-end-title{
+      font-family:var(--font-serif); font-size:clamp(24px, 3.2vw, 32px);
+      font-weight:400; color:#ffffff;
+    }
+    .ag-final-score{
+      font-size:clamp(42px, 6vw, 56px); font-weight:700; color:var(--cyan);
+      line-height:1.1; font-variant-numeric:tabular-nums;
+    }
+    .ag-end-stats{
+      font-size:15px; color:rgba(226, 232, 240, 0.85);
+      font-variant-numeric:tabular-nums;
+    }
+    .ag-end-actions{
+      display:flex; align-items:center; justify-content:center; gap:12px;
+      flex-wrap:wrap; margin-top:6px;
+    }
+    .ag-btn-primary{
+      padding:12px 24px; min-height:46px; border-radius:999px; border:0;
+      background:linear-gradient(180deg,#ffffff 0%,#d6e8f8 10%,#d9ecfe 75%,#ffffff 100%);
+      color:var(--btn-ink); font-family:var(--font-body); font-size:15px; font-weight:700;
+      cursor:pointer; white-space:nowrap;
+      transition:transform .16s ease, box-shadow .16s ease;
+    }
+    .ag-btn-primary:hover{transform:translateY(-1px); box-shadow:0 8px 24px rgba(121,220,232,0.3)}
+    .ag-btn-secondary{
+      padding:12px 22px; min-height:46px; border-radius:999px;
+      background:rgba(255, 255, 255, 0.08);
+      border:1px solid rgba(255, 255, 255, 0.24);
+      color:#ffffff; font-family:var(--font-body); font-size:15px; font-weight:600;
+      cursor:pointer; white-space:nowrap;
+      transition:background .16s ease, border-color .16s ease;
+    }
+    .ag-btn-secondary:hover{background:rgba(255,255,255,0.15); border-color:rgba(121,220,232,0.6)}
+
+    .ag-back-btn:focus-visible,.ag-mode-btn:focus-visible,.ag-opt-btn:focus-visible,
+    .ag-btn-primary:focus-visible,.ag-btn-secondary:focus-visible,.ag-sound-btn:focus-visible{
+      outline:2px solid var(--cyan); outline-offset:2px;
+    }
+
+    @media (max-width:680px){
+      .anime-game{inset:calc(76 * var(--u)) 0 0 0; padding:12px 12px 20px; align-items:flex-start}
+      .ag-card{padding:18px 16px 20px; border-radius:18px; gap:14px}
+      .ag-modes{grid-template-columns:1fr}
+      .ag-mode-btn{min-height:auto; padding:14px 16px; flex-direction:row; align-items:center}
+      .ag-options{grid-template-columns:1fr}
+      .ag-stage-box{min-height:185px; padding:14px}
+      .ag-img-wrap{max-width:300px}
+      .ag-img-wrap.is-character{max-width:180px}
+    }
   </style>
 </head>
 <body>
@@ -369,13 +632,13 @@
     <div class="ui">
       <header class="navbar">
         <div class="navrow">
-          <a class="logo" href="#">space<i>edu</i></a>
+          <a class="logo" href="#taniltsuulga" data-nav="earth">space<i>edu</i></a>
           <nav class="links" id="site-nav">
-            <a href="#" aria-current="page">Planets</a>
-            <a href="#">Tution</a>
-            <a href="#">Tutorials</a>
-            <a href="#">Blog</a>
-            <a class="enroll" href="#">Enroll</a>
+            <a href="#taniltsuulga" data-nav="earth" aria-current="page">Taniltsuulga</a>
+            <a href="#moroodol" data-nav="venus">Moroodol</a>
+            <a href="#shaltgaan" data-nav="mars">Shaltgaan</a>
+            <a href="#anime-guess" data-nav="game">Anime Guess</a>
+            <a class="enroll" href="#anime-guess" data-nav="game">Тоглох</a>
           </nav>
           <button class="burger" type="button" aria-label="Open navigation"
                   aria-expanded="false" aria-controls="site-nav">
@@ -404,8 +667,28 @@
           <span class="label label-r"></span>
         </div>
       </div>
+
+      <section class="anime-game" id="anime-game" aria-label="Anime Guess тоглоом">
+        <div class="ag-card">
+          <div class="ag-topbar">
+            <div class="ag-brand-left">
+              <button type="button" class="ag-back-btn" id="ag-back-btn">← Буцах</button>
+              <h2 class="ag-title">Anime Guess</h2>
+            </div>
+            <div class="ag-hud" id="ag-hud">
+              <span class="ag-hud-item">Оноо: <span class="ag-hud-val is-cyan" id="ag-score">0</span></span>
+              <span class="ag-hud-sep" aria-hidden="true">·</span>
+              <span class="ag-hud-item">Амь: <span class="ag-hud-val" id="ag-lives">❤️❤️❤️ 3/3</span></span>
+              <span class="ag-hud-sep" aria-hidden="true">·</span>
+              <span class="ag-hud-item">Цаг: <span class="ag-hud-val" id="ag-timer">15с</span></span>
+              <button type="button" class="ag-sound-btn" id="ag-sound-btn" aria-label="Дуу асаах эсвэл унтраах" title="Дуу">🔊</button>
+            </div>
+          </div>
+          <div id="ag-body"></div>
+        </div>
+      </section>
     </div>
-    <button class="scroll" type="button" aria-label="Scroll to next section">
+    <button class="scroll" type="button" id="open-game-scroll" aria-label="Anime Guess тоглоом нээх" title="Anime Guess тоглох">
       <svg viewBox="0 0 26 33" fill="none" aria-hidden="true">
         <path d="M13 1.5 V31.5 M1.9 20.4 L13 31.5 L24.1 20.4" stroke="#ffffff"
               stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
@@ -579,6 +862,7 @@
         btn.addEventListener('click', function() {
           if (btn.dataset.planet) {
             show(btn.dataset.planet);
+            setNavActive(btn.dataset.planet);
           }
         });
       });
@@ -637,6 +921,665 @@
           });
         });
       }
+
+      // 11. PORTFOLIO / ANIME GUESS NAVIGATION & GAME ENGINE
+      const navTriggers = Array.from(document.querySelectorAll('[data-nav]'));
+      const openGameScroll = document.getElementById('open-game-scroll');
+      const agBackBtn = document.getElementById('ag-back-btn');
+      const agBody = document.getElementById('ag-body');
+      const agScoreEl = document.getElementById('ag-score');
+      const agLivesEl = document.getElementById('ag-lives');
+      const agTimerEl = document.getElementById('ag-timer');
+      const agSoundBtn = document.getElementById('ag-sound-btn');
+
+      const QUESTION_SECONDS = 15;
+      const MAX_LIVES = 3;
+      const POINTS_PER_CORRECT = 10;
+      const BLUR_STEPS = [24, 16, 9, 4, 0];
+
+      const DEFAULT_CHARACTERS = [
+        {
+          id: 'luffy',
+          name: 'Luffy',
+          anime: 'One Piece',
+          image: '/assets/anime/luffy.svg',
+          options: ['Luffy', 'Naruto', 'Goku', 'Zoro'],
+          answer: 'Luffy'
+        },
+        {
+          id: 'naruto',
+          name: 'Naruto',
+          anime: 'Naruto',
+          image: '/assets/anime/naruto.svg',
+          options: ['Sasuke', 'Naruto', 'Luffy', 'Minato'],
+          answer: 'Naruto'
+        },
+        {
+          id: 'goku',
+          name: 'Goku',
+          anime: 'Dragon Ball',
+          image: '/assets/anime/goku.svg',
+          options: ['Vegeta', 'Goku', 'Gohan', 'Naruto'],
+          answer: 'Goku'
+        }
+      ];
+
+      const game = {
+        view: 'MENU', // 'MENU' | 'PLAYING' | 'FEEDBACK' | 'GAME_OVER'
+        mode: null,   // 'emoji' | 'anime' | 'character'
+        questions: [],
+        characters: [],
+        loaded: false,
+        loadError: null,
+        deck: [],
+        index: 0,
+        score: 0,
+        lives: MAX_LIVES,
+        correctCount: 0,
+        answeredCount: 0,
+        timeLeft: QUESTION_SECONDS,
+        timerId: null,
+        advanceId: null,
+        runToken: 0,
+        soundOn: true,
+        audioCtx: null
+      };
+
+      function playTone(type) {
+        if (!game.soundOn) return;
+        try {
+          const Ctx = window.AudioContext || window.webkitAudioContext;
+          if (!Ctx) return;
+          if (!game.audioCtx) game.audioCtx = new Ctx();
+          const ctx = game.audioCtx;
+          if (ctx.state === 'suspended') ctx.resume();
+          const now = ctx.currentTime;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          if (type === 'correct') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(523.25, now);
+            osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.14);
+            gain.gain.setValueAtTime(0.12, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.24);
+            osc.start(now);
+            osc.stop(now + 0.25);
+          } else if (type === 'wrong') {
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(240, now);
+            osc.frequency.exponentialRampToValueAtTime(140, now + 0.22);
+            gain.gain.setValueAtTime(0.14, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.26);
+            osc.start(now);
+            osc.stop(now + 0.27);
+          } else if (type === 'end') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(440, now);
+            osc.frequency.setValueAtTime(554.37, now + 0.1);
+            osc.frequency.setValueAtTime(659.25, now + 0.2);
+            gain.gain.setValueAtTime(0.12, now);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 0.42);
+            osc.start(now);
+            osc.stop(now + 0.44);
+          }
+        } catch (e) {}
+      }
+
+      function clearGameTimers() {
+        if (game.timerId) {
+          clearInterval(game.timerId);
+          game.timerId = null;
+        }
+        if (game.advanceId) {
+          clearTimeout(game.advanceId);
+          game.advanceId = null;
+        }
+      }
+
+      function shuffle(list) {
+        const arr = list.slice();
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const tmp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = tmp;
+        }
+        return arr;
+      }
+
+      function escapeHtml(str) {
+        return String(str == null ? '' : str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function normalizeQuestions(rawItems) {
+        if (!Array.isArray(rawItems)) return [];
+        return rawItems
+          .map(function(item) {
+            if (!item || typeof item !== 'object') return null;
+            const answer = String(item.answer || item.correct || item.title || item.name || '').trim();
+            const options = Array.isArray(item.options)
+              ? item.options.map(function(o) { return String(o).trim(); }).filter(Boolean)
+              : [];
+            if (!answer || options.length < 2) return null;
+            return {
+              emoji: String(item.emoji || '').trim(),
+              image: String(item.image || '').trim(),
+              options: options,
+              answer: answer
+            };
+          })
+          .filter(Boolean);
+      }
+
+      function normalizeCharacters(rawChars) {
+        const source = Array.isArray(rawChars) && rawChars.length ? rawChars : DEFAULT_CHARACTERS;
+        const poolNames = ['Luffy', 'Naruto', 'Goku', 'Zoro', 'Sasuke', 'Ichigo', 'Gojo', 'Tanjiro'];
+        return source
+          .map(function(c) {
+            if (!c || typeof c !== 'object') return null;
+            const answer = String(c.answer || c.name || '').trim();
+            const image = String(c.image || '').trim();
+            if (!answer || !image) return null;
+            let options = Array.isArray(c.options)
+              ? c.options.map(function(o) { return String(o).trim(); }).filter(Boolean)
+              : [];
+            if (options.length < 4) {
+              const extras = shuffle(poolNames.filter(function(n) { return n !== answer && options.indexOf(n) === -1; }));
+              if (options.indexOf(answer) === -1) options.unshift(answer);
+              while (options.length < 4 && extras.length) {
+                options.push(extras.shift());
+              }
+            }
+            return {
+              name: answer,
+              image: image,
+              options: options.slice(0, 4),
+              answer: answer
+            };
+          })
+          .filter(Boolean);
+      }
+
+      function loadData() {
+        return fetch('/data.json', { cache: 'no-store' })
+          .then(function(res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+          })
+          .then(function(data) {
+            if (Array.isArray(data)) {
+              game.questions = normalizeQuestions(data);
+              game.characters = normalizeCharacters(null);
+            } else if (data && typeof data === 'object') {
+              const qList = data.questions || data.anime || data.items || [];
+              game.questions = normalizeQuestions(qList);
+              game.characters = normalizeCharacters(data.characters);
+            } else {
+              game.questions = [];
+              game.characters = normalizeCharacters(null);
+            }
+            game.loaded = true;
+            game.loadError = null;
+          })
+          .catch(function(err) {
+            game.loaded = true;
+            game.loadError = err && err.message ? err.message : 'Дата ачаалж чадсангүй';
+          });
+      }
+
+      function updateHud() {
+        if (agScoreEl) agScoreEl.textContent = String(game.score);
+        if (agLivesEl) {
+          let hearts = '';
+          for (let i = 0; i < MAX_LIVES; i++) {
+            hearts += i < game.lives ? '❤️' : '🖤';
+          }
+          agLivesEl.textContent = hearts + ' ' + game.lives + '/' + MAX_LIVES;
+          agLivesEl.className = 'ag-hud-val' + (game.lives <= 1 ? ' is-danger' : '');
+        }
+        if (agTimerEl) {
+          agTimerEl.textContent = game.timeLeft + 'с';
+          agTimerEl.className = 'ag-hud-val' +
+            (game.timeLeft <= 3 ? ' is-danger' : game.timeLeft <= 6 ? ' is-warn' : '');
+        }
+      }
+
+      function getModeLabel(mode) {
+        if (mode === 'emoji') return 'Emoji';
+        if (mode === 'anime') return 'Anime';
+        if (mode === 'character') return 'Баатар';
+        return '';
+      }
+
+      function getBlurPx(timeLeft) {
+        const elapsed = QUESTION_SECONDS - timeLeft;
+        const step = Math.min(BLUR_STEPS.length - 1, Math.max(0, Math.floor(elapsed / 3)));
+        return BLUR_STEPS[step];
+      }
+
+      function renderMenu() {
+        clearGameTimers();
+        game.view = 'MENU';
+        game.mode = null;
+        game.timeLeft = QUESTION_SECONDS;
+        updateHud();
+
+        if (!game.loaded) {
+          agBody.innerHTML = '<div class="ag-menu"><div class="ag-menu-head"><h2>Ачаалж байна...</h2><p class="ag-menu-sub">data.json файлаас асуултуудыг уншиж байна.</p></div></div>';
+          return;
+        }
+
+        if (game.loadError) {
+          agBody.innerHTML =
+            '<div class="ag-menu">' +
+              '<div class="ag-menu-head">' +
+                '<h2>Дата ачаалахад алдаа гарлаа</h2>' +
+                '<p class="ag-menu-sub">' + escapeHtml(game.loadError) + '</p>' +
+              '</div>' +
+              '<div class="ag-end-actions"><button type="button" class="ag-btn-primary" id="ag-retry-load">Дахин ачаалах</button></div>' +
+            '</div>';
+          const retryBtn = document.getElementById('ag-retry-load');
+          if (retryBtn) {
+            retryBtn.addEventListener('click', function() {
+              game.loaded = false;
+              renderMenu();
+              loadData().then(renderMenu);
+            });
+          }
+          return;
+        }
+
+        const emojiCount = game.questions.filter(function(q) { return q.emoji; }).length;
+        const animeCount = game.questions.filter(function(q) { return q.image; }).length;
+        const charCount = game.characters.length;
+
+        agBody.innerHTML =
+          '<div class="ag-menu">' +
+            '<div class="ag-menu-head">' +
+              '<h2>Ямар горимоор тоглох вэ?</h2>' +
+              '<p class="ag-menu-sub">Тоглох бүрт асуултын дараалал автоматаар холигдоно.</p>' +
+            '</div>' +
+            '<div class="ag-modes">' +
+              '<button type="button" class="ag-mode-btn" data-mode="emoji"' + (emojiCount === 0 ? ' disabled' : '') + '>' +
+                '<span class="ag-mode-icon" aria-hidden="true">🎭</span>' +
+                '<span class="ag-mode-name">Emoji</span>' +
+                '<span class="ag-mode-desc">Emoji харж анимийг таана · ' + emojiCount + ' асуулт</span>' +
+              '</button>' +
+              '<button type="button" class="ag-mode-btn" data-mode="anime"' + (animeCount === 0 ? ' disabled' : '') + '>' +
+                '<span class="ag-mode-icon" aria-hidden="true">🖼️</span>' +
+                '<span class="ag-mode-name">Anime</span>' +
+                '<span class="ag-mode-desc">Бүдэг зураг 3 сек тутам тодорно · ' + animeCount + ' асуулт</span>' +
+              '</button>' +
+              '<button type="button" class="ag-mode-btn" data-mode="character"' + (charCount === 0 ? ' disabled' : '') + '>' +
+                '<span class="ag-mode-icon" aria-hidden="true">⚡</span>' +
+                '<span class="ag-mode-name">Баатар</span>' +
+                '<span class="ag-mode-desc">Баатрын зургаар нэрийг таана · ' + charCount + ' баатар</span>' +
+              '</button>' +
+            '</div>' +
+            '<div class="ag-rules-line">Асуулт бүрт 15 секунд · 3 амьтай · Зөв хариу +10 оноо</div>' +
+          '</div>';
+
+        agBody.querySelectorAll('[data-mode]').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            startGame(btn.dataset.mode);
+          });
+        });
+      }
+
+      function startGame(mode) {
+        clearGameTimers();
+        game.runToken += 1;
+        game.mode = mode;
+        game.score = 0;
+        game.lives = MAX_LIVES;
+        game.correctCount = 0;
+        game.answeredCount = 0;
+        game.index = 0;
+        game.timeLeft = QUESTION_SECONDS;
+
+        if (mode === 'emoji') {
+          game.deck = shuffle(game.questions.filter(function(q) { return Boolean(q.emoji); }));
+        } else if (mode === 'anime') {
+          game.deck = shuffle(game.questions.filter(function(q) { return Boolean(q.image && q.image.trim()); }));
+        } else if (mode === 'character') {
+          game.deck = shuffle(game.characters.filter(function(c) { return Boolean(c.image && c.image.trim()); }));
+        } else {
+          game.deck = [];
+        }
+
+        updateHud();
+        if (!game.deck.length) {
+          renderEndScreen('Энэ горимд тохирох асуулт олдсонгүй.');
+          return;
+        }
+        presentQuestion();
+      }
+
+      function preloadImage(src) {
+        return new Promise(function(resolve) {
+          if (!src) {
+            resolve(false);
+            return;
+          }
+          const img = new Image();
+          img.onload = function() { resolve(true); };
+          img.onerror = function() { resolve(false); };
+          img.src = src;
+        });
+      }
+
+      function presentQuestion() {
+        clearGameTimers();
+        if (game.lives <= 0) {
+          renderEndScreen('Амь дууслаа! Тоглоом дууслаа.');
+          return;
+        }
+        if (game.index >= game.deck.length) {
+          renderEndScreen('Баяр хүргэе! Бүх асуултыг дуусгалаа.');
+          return;
+        }
+
+        const item = game.deck[game.index];
+        const token = game.runToken;
+
+        if (game.mode === 'anime' || game.mode === 'character') {
+          agBody.innerHTML = '<div class="ag-play"><div class="ag-stage-box"><span class="ag-prompt-label">Зураг ачаалж байна...</span></div></div>';
+          preloadImage(item.image).then(function(ok) {
+            if (token !== game.runToken) return;
+            if (!ok) {
+              // Skip questions whose image fails to load in Anime (or Character) mode
+              game.index += 1;
+              presentQuestion();
+              return;
+            }
+            renderActiveQuestion(item);
+          });
+        } else {
+          renderActiveQuestion(item);
+        }
+      }
+
+      function renderActiveQuestion(item) {
+        clearGameTimers();
+        game.view = 'PLAYING';
+        game.timeLeft = QUESTION_SECONDS;
+        updateHud();
+
+        const options = shuffle(item.options);
+        const keys = ['A', 'B', 'C', 'D'];
+        const modeLabel = getModeLabel(game.mode);
+        const total = game.deck.length;
+        const currentNum = game.index + 1;
+
+        let stageHtml = '';
+        if (game.mode === 'emoji') {
+          stageHtml =
+            '<div class="ag-emoji-display" aria-label="Anime emoji">' + escapeHtml(item.emoji) + '</div>' +
+            '<div class="ag-prompt-label">Энэ ямар анимэ вэ?</div>';
+        } else if (game.mode === 'anime') {
+          const initialBlur = getBlurPx(game.timeLeft);
+          stageHtml =
+            '<div class="ag-img-wrap">' +
+              '<img class="ag-img" id="ag-question-img" src="' + escapeHtml(item.image) + '" alt="Нууцлагдмал анимэ зураг" style="filter:blur(' + initialBlur + 'px);transform:scale(1.06)">' +
+            '</div>' +
+            '<div class="ag-blur-note" id="ag-blur-note">Тодролт: 1/5 (3 сек тутам тодорно)</div>';
+        } else {
+          stageHtml =
+            '<div class="ag-img-wrap is-character">' +
+              '<img class="ag-img" id="ag-question-img" src="' + escapeHtml(item.image) + '" alt="Анимэ баатрын зураг">' +
+            '</div>' +
+            '<div class="ag-prompt-label">Энэ ямар баатар вэ?</div>';
+        }
+
+        const optionsHtml = options.map(function(opt, idx) {
+          return (
+            '<button type="button" class="ag-opt-btn" data-option="' + escapeHtml(opt) + '">' +
+              '<span class="ag-opt-key">' + (keys[idx] || (idx + 1)) + '</span>' +
+              '<span class="ag-opt-text">' + escapeHtml(opt) + '</span>' +
+              '<span class="ag-opt-mark" aria-hidden="true"></span>' +
+            '</button>'
+          );
+        }).join('');
+
+        agBody.innerHTML =
+          '<div class="ag-play">' +
+            '<div class="ag-meta-row">' +
+              '<span>Горим: ' + escapeHtml(modeLabel) + '</span>' +
+              '<span>Асуулт ' + currentNum + ' / ' + total + '</span>' +
+            '</div>' +
+            '<div class="ag-timer-track"><div class="ag-timer-fill" id="ag-timer-fill"></div></div>' +
+            '<div class="ag-stage-box">' + stageHtml + '</div>' +
+            '<div class="ag-options" id="ag-options">' + optionsHtml + '</div>' +
+            '<div class="ag-feedback is-idle" id="ag-feedback">Зөв хариултыг 15 секундийн дотор сонгоно уу.</div>' +
+          '</div>';
+
+        const optionBtns = Array.from(agBody.querySelectorAll('.ag-opt-btn'));
+        optionBtns.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            handleAnswer(btn.dataset.option, item.answer);
+          });
+        });
+
+        const timerFill = document.getElementById('ag-timer-fill');
+        const qImg = document.getElementById('ag-question-img');
+        const blurNote = document.getElementById('ag-blur-note');
+
+        game.timerId = setInterval(function() {
+          if (game.view !== 'PLAYING') return;
+          game.timeLeft -= 1;
+          if (game.timeLeft < 0) game.timeLeft = 0;
+          updateHud();
+
+          if (timerFill) {
+            const pct = Math.max(0, (game.timeLeft / QUESTION_SECONDS) * 100);
+            timerFill.style.width = pct + '%';
+            timerFill.className = 'ag-timer-fill' +
+              (game.timeLeft <= 3 ? ' is-danger' : game.timeLeft <= 6 ? ' is-warn' : '');
+          }
+
+          if (game.mode === 'anime' && qImg) {
+            const blurPx = getBlurPx(game.timeLeft);
+            const stepNum = Math.min(BLUR_STEPS.length, Math.floor((QUESTION_SECONDS - game.timeLeft) / 3) + 1);
+            qImg.style.filter = 'blur(' + blurPx + 'px)';
+            qImg.style.transform = blurPx > 0 ? 'scale(1.06)' : 'scale(1)';
+            if (blurNote) {
+              blurNote.textContent = blurPx === 0
+                ? 'Тодролт: 5/5 (Бүрэн тодорлоо)'
+                : 'Тодролт: ' + stepNum + '/5 (3 сек тутам тодорно)';
+            }
+          }
+
+          if (game.timeLeft <= 0) {
+            handleAnswer(null, item.answer);
+          }
+        }, 1000);
+      }
+
+      function handleAnswer(selectedOption, correctAnswer) {
+        if (game.view !== 'PLAYING') return;
+        clearGameTimers();
+        game.view = 'FEEDBACK';
+        game.answeredCount += 1;
+
+        const isTimeout = selectedOption === null;
+        const isCorrect = !isTimeout && selectedOption === correctAnswer;
+
+        if (isCorrect) {
+          game.score += POINTS_PER_CORRECT;
+          game.correctCount += 1;
+          playTone('correct');
+        } else {
+          game.lives = Math.max(0, game.lives - 1);
+          playTone('wrong');
+        }
+        updateHud();
+
+        // Reveal full clear image in Anime mode
+        const qImg = document.getElementById('ag-question-img');
+        const blurNote = document.getElementById('ag-blur-note');
+        if (qImg && game.mode === 'anime') {
+          qImg.style.filter = 'blur(0px)';
+          qImg.style.transform = 'scale(1)';
+          if (blurNote) blurNote.textContent = 'Зөв хариу: ' + correctAnswer;
+        }
+
+        const optionBtns = Array.from(agBody.querySelectorAll('.ag-opt-btn'));
+        optionBtns.forEach(function(btn) {
+          btn.disabled = true;
+          const val = btn.dataset.option;
+          const markEl = btn.querySelector('.ag-opt-mark');
+          if (val === correctAnswer) {
+            btn.classList.add('is-correct');
+            if (markEl) markEl.textContent = '✓';
+          } else if (!isCorrect && val === selectedOption) {
+            btn.classList.add('is-wrong');
+            if (markEl) markEl.textContent = '✕';
+          }
+        });
+
+        const feedbackEl = document.getElementById('ag-feedback');
+        if (feedbackEl) {
+          if (isCorrect) {
+            feedbackEl.className = 'ag-feedback is-correct';
+            feedbackEl.innerHTML = '<span>✓ Зөв! +' + POINTS_PER_CORRECT + ' оноо</span>';
+          } else if (isTimeout) {
+            feedbackEl.className = 'ag-feedback is-wrong';
+            feedbackEl.innerHTML = '<span>⏱ Цаг дууслаа! Зөв хариу: ' + escapeHtml(correctAnswer) + '</span>';
+          } else {
+            feedbackEl.className = 'ag-feedback is-wrong';
+            feedbackEl.innerHTML = '<span>✕ Буруу! Зөв хариу: ' + escapeHtml(correctAnswer) + '</span>';
+          }
+        }
+
+        const token = game.runToken;
+        game.advanceId = setTimeout(function() {
+          if (token !== game.runToken) return;
+          game.index += 1;
+          presentQuestion();
+        }, 1500);
+      }
+
+      function renderEndScreen(headline) {
+        clearGameTimers();
+        game.view = 'GAME_OVER';
+        playTone('end');
+        updateHud();
+
+        const modeLabel = getModeLabel(game.mode);
+        agBody.innerHTML =
+          '<div class="ag-end">' +
+            '<h2 class="ag-end-title">' + escapeHtml(headline || 'Тоглоом дууслаа!') + '</h2>' +
+            '<div class="ag-final-score">' + game.score + ' оноо</div>' +
+            '<div class="ag-end-stats">Горим: ' + escapeHtml(modeLabel) + ' · Зөв хариулт: ' + game.correctCount + ' / ' + game.answeredCount + ' · Үлдсэн амь: ' + game.lives + '/' + MAX_LIVES + '</div>' +
+            '<div class="ag-end-actions">' +
+              '<button type="button" class="ag-btn-primary" id="ag-replay-btn">Дахин тоглох</button>' +
+              '<button type="button" class="ag-btn-secondary" id="ag-switch-mode-btn">Горим солих</button>' +
+            '</div>' +
+          '</div>';
+
+        const replayBtn = document.getElementById('ag-replay-btn');
+        const switchBtn = document.getElementById('ag-switch-mode-btn');
+        if (replayBtn) {
+          replayBtn.addEventListener('click', function() {
+            startGame(game.mode);
+          });
+        }
+        if (switchBtn) {
+          switchBtn.addEventListener('click', function() {
+            renderMenu();
+          });
+        }
+      }
+
+      function setNavActive(target) {
+        if (!navLinks) return;
+        navLinks.querySelectorAll('a[data-nav]').forEach(function(a) {
+          if (a.classList.contains('enroll')) return;
+          if (a.dataset.nav === target) {
+            a.setAttribute('aria-current', 'page');
+          } else {
+            a.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      function openGame() {
+        document.body.classList.add('mode-game');
+        setNavActive('game');
+        if (!game.loaded) {
+          renderMenu();
+          loadData().then(function() {
+            if (game.view === 'MENU') renderMenu();
+          });
+        } else if (game.view === 'MENU' || game.mode === null) {
+          renderMenu();
+        }
+      }
+
+      function closeGame(planetTarget) {
+        clearGameTimers();
+        game.runToken += 1;
+        game.view = 'MENU';
+        game.mode = null;
+        document.body.classList.remove('mode-game');
+        const nextPlanet = planetTarget || currentFeatured || 'earth';
+        show(nextPlanet);
+        setNavActive(nextPlanet);
+      }
+
+      navTriggers.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = link.dataset.nav;
+          if (target === 'game') {
+            openGame();
+          } else {
+            closeGame(target);
+          }
+        });
+      });
+
+      if (openGameScroll) {
+        openGameScroll.addEventListener('click', function() {
+          openGame();
+        });
+      }
+
+      if (agBackBtn) {
+        agBackBtn.addEventListener('click', function() {
+          closeGame(currentFeatured || 'earth');
+        });
+      }
+
+      if (agSoundBtn) {
+        agSoundBtn.addEventListener('click', function() {
+          game.soundOn = !game.soundOn;
+          agSoundBtn.textContent = game.soundOn ? '🔊' : '🔇';
+        });
+      }
+
+      // Keyboard shortcuts 1-4 for options while playing
+      document.addEventListener('keydown', function(e) {
+        if (!document.body.classList.contains('mode-game') || game.view !== 'PLAYING') return;
+        const idx = ['1', '2', '3', '4'].indexOf(e.key);
+        if (idx !== -1) {
+          const btns = agBody.querySelectorAll('.ag-opt-btn');
+          if (btns[idx] && !btns[idx].disabled) {
+            btns[idx].click();
+          }
+        }
+      });
+
+      // Preload data.json quietly in background
+      loadData();
     })();
   </script>
 </body>

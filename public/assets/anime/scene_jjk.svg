@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <radialGradient id="void" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="28%" stop-color="#3b82f6"/>
+      <stop offset="65%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="#050816"/>
+  <!-- Domain Expansion Cosmic Ring -->
+  <circle cx="300" cy="225" r="185" fill="url(#void)"/>
+  <circle cx="300" cy="225" r="125" fill="none" stroke="#93c5fd" stroke-width="3" opacity="0.7"/>
+  <circle cx="300" cy="225" r="158" fill="none" stroke="#f43f5e" stroke-width="2" stroke-dasharray="12 8" opacity="0.65"/>
+  <!-- Hollow Purple / Blue-Red Clash Orbs -->
+  <circle cx="220" cy="225" r="46" fill="#2563eb" opacity="0.85"/>
+  <circle cx="380" cy="225" r="46" fill="#dc2626" opacity="0.85"/>
+  <circle cx="300" cy="225" r="56" fill="#a855f7" opacity="0.92"/>
+  <circle cx="300" cy="225" r="30" fill="#ffffff" opacity="0.95"/>
+  <!-- Blindfolded White-Haired Silhouette -->
+  <path d="M250 450 C255 340 270 310 300 310 C330 310 345 340 350 450 Z" fill="#0f172a"/>
+  <circle cx="300" cy="278" r="32" fill="#f8fafc"/>
+  <rect x="268" y="266" width="64" height="18" rx="4" fill="#090d16"/>
+  <path d="M262 268 L278 232 L292 255 L304 226 L316 254 L334 234 L340 268 Z" fill="#f8fafc"/>
+</svg>

@@ -1,0 +1,170 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "emoji": "🏴‍☠️👒🍖🌊",
+      "image": "/assets/anime/scene_one_piece.svg",
+      "options": ["One Piece", "Naruto", "Bleach", "Fairy Tail"],
+      "answer": "One Piece"
+    },
+    {
+      "id": 2,
+      "emoji": "🍥🍜🦊🥷",
+      "image": "/assets/anime/scene_naruto.svg",
+      "options": ["Naruto", "Boruto", "Jujutsu Kaisen", "Hunter x Hunter"],
+      "answer": "Naruto"
+    },
+    {
+      "id": 3,
+      "emoji": "🐉🟠⚡🥋",
+      "image": "/assets/anime/scene_dragon_ball.svg",
+      "options": ["Dragon Ball", "One Punch Man", "My Hero Academia", "Solo Leveling"],
+      "answer": "Dragon Ball"
+    },
+    {
+      "id": 4,
+      "emoji": "⚔️👹🌊🦋",
+      "image": "/assets/anime/scene_demon_slayer.svg",
+      "options": ["Demon Slayer", "Bleach", "Black Clover", "Chainsaw Man"],
+      "answer": "Demon Slayer"
+    },
+    {
+      "id": 5,
+      "emoji": "🧱🗽⚔️🩸",
+      "image": "/assets/anime/scene_aot.svg",
+      "options": ["Attack on Titan", "Vinland Saga", "Tokyo Ghoul", "Fullmetal Alchemist"],
+      "answer": "Attack on Titan"
+    },
+    {
+      "id": 6,
+      "emoji": "📓🍎✍️⚖️",
+      "image": "/assets/anime/scene_death_note.svg",
+      "options": ["Death Note", "Code Geass", "Monster", "Psycho-Pass"],
+      "answer": "Death Note"
+    },
+    {
+      "id": 7,
+      "emoji": "🕷️🕸️🏙️⚡",
+      "image": "/assets/anime/scene_spiderverse.svg",
+      "options": ["Spider-Man: Miles Morales", "My Hero Academia", "Cyberpunk: Edgerunners", "Chainsaw Man"],
+      "answer": "Spider-Man: Miles Morales"
+    },
+    {
+      "id": 8,
+      "emoji": "👊💥🦸‍♂️👨‍🦲",
+      "image": "/assets/anime/scene_opm.svg",
+      "options": ["One Punch Man", "Mob Psycho 100", "Dragon Ball", "Baki"],
+      "answer": "One Punch Man"
+    },
+    {
+      "id": 9,
+      "emoji": "🤞👁️🔮🔥",
+      "image": "/assets/anime/scene_jjk.svg",
+      "options": ["Jujutsu Kaisen", "Demon Slayer", "Tokyo Revengers", "Bleach"],
+      "answer": "Jujutsu Kaisen"
+    },
+    {
+      "id": 10,
+      "emoji": "⚡🔴⚪🐭",
+      "image": "/assets/anime/scene_pokemon.svg",
+      "options": ["Pokemon", "Digimon", "Yu-Gi-Oh!", "Beyblade"],
+      "answer": "Pokemon"
+    },
+    {
+      "id": 11,
+      "emoji": "⚽🔵🔒🔥",
+      "image": "/assets/anime/scene_bluelock.svg",
+      "options": ["Blue Lock", "Inazuma Eleven", "Haikyuu!!", "Captain Tsubasa"],
+      "answer": "Blue Lock"
+    },
+    {
+      "id": 12,
+      "emoji": "👻🏮🐷🐉",
+      "image": "/assets/anime/scene_spirited_away.svg",
+      "options": ["Spirited Away", "Your Name", "Howl's Moving Castle", "Totoro"],
+      "answer": "Spirited Away"
+    },
+    {
+      "id": 13,
+      "emoji": "🪚🐶😈🩸",
+      "image": "",
+      "options": ["Chainsaw Man", "Tokyo Ghoul", "Hell's Paradise", "Dandadan"],
+      "answer": "Chainsaw Man"
+    },
+    {
+      "id": 14,
+      "emoji": "🏫🦸‍♂️🥦💥",
+      "image": "",
+      "options": ["My Hero Academia", "One Punch Man", "Black Clover", "Fire Force"],
+      "answer": "My Hero Academia"
+    },
+    {
+      "id": 15,
+      "emoji": "🕵️‍♂️🧠🥜🔫",
+      "image": "",
+      "options": ["Spy x Family", "Detective Conan", "Sakamoto Days", "Assassination Classroom"],
+      "answer": "Spy x Family"
+    },
+    {
+      "id": 16,
+      "emoji": "🏐🟠🐦🔥",
+      "image": "",
+      "options": ["Haikyuu!!", "Kuroko's Basketball", "Blue Lock", "Slam Dunk"],
+      "answer": "Haikyuu!!"
+    },
+    {
+      "id": 17,
+      "emoji": "☕👁️🩸🎭",
+      "image": "",
+      "options": ["Tokyo Ghoul", "Parasyte", "Ajin", "Attack on Titan"],
+      "answer": "Tokyo Ghoul"
+    },
+    {
+      "id": 18,
+      "emoji": "🗡️🌑👑🐺",
+      "image": "",
+      "options": ["Solo Leveling", "Sword Art Online", "Overlord", "Bleach"],
+      "answer": "Solo Leveling"
+    },
+    {
+      "id": 19,
+      "emoji": "🎣⚡🃏⛓️",
+      "image": "",
+      "options": ["Hunter x Hunter", "Yu Yu Hakusho", "Naruto", "Fullmetal Alchemist"],
+      "answer": "Hunter x Hunter"
+    },
+    {
+      "id": 20,
+      "emoji": "🦾⚗️🔴🛡️",
+      "image": "",
+      "options": ["Fullmetal Alchemist", "Dr. Stone", "Steins;Gate", "Code Geass"],
+      "answer": "Fullmetal Alchemist"
+    }
+  ],
+  "characters": [
+    {
+      "id": "luffy",
+      "name": "Luffy",
+      "anime": "One Piece",
+      "image": "/assets/anime/luffy.svg",
+      "options": ["Luffy", "Naruto", "Goku", "Zoro"],
+      "answer": "Luffy"
+    },
+    {
+      "id": "naruto",
+      "name": "Naruto",
+      "anime": "Naruto",
+      "image": "/assets/anime/naruto.svg",
+      "options": ["Sasuke", "Naruto", "Luffy", "Minato"],
+      "answer": "Naruto"
+    },
+    {
+      "id": "goku",
+      "name": "Goku",
+      "anime": "Dragon Ball",
+      "image": "/assets/anime/goku.svg",
+      "options": ["Vegeta", "Goku", "Gohan", "Naruto"],
+      "answer": "Goku"
+    }
+  ]
+}

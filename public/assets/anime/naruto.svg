@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c1d4d"/>
+      <stop offset="50%" stop-color="#c94b4b"/>
+      <stop offset="100%" stop-color="#ff9944"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7a18"/>
+      <stop offset="100%" stop-color="#d94e00"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#sunset)"/>
+  <circle cx="200" cy="215" r="115" fill="#ffd27d" opacity="0.35"/>
+  <!-- Village rooftops silhouette -->
+  <path d="M0 320 L55 290 L110 320 L110 400 L0 400 Z" fill="#1c1427" opacity="0.65"/>
+  <path d="M290 325 L345 288 L400 325 L400 400 L290 400 Z" fill="#1c1427" opacity="0.65"/>
+  <!-- Orange & Black Ninja Jacket -->
+  <path d="M85 400 C92 308 135 280 200 280 C265 280 308 308 315 400 Z" fill="url(#jacket)"/>
+  <path d="M122 290 C150 272 250 272 278 290 L262 332 L138 332 Z" fill="#1f232e" stroke="#111" stroke-width="3"/>
+  <rect x="193" y="325" width="14" height="75" fill="#1f232e"/>
+  <line x1="200" y1="325" x2="200" y2="400" stroke="#e2e8f0" stroke-width="3" stroke-dasharray="6,6"/>
+  <!-- Neck -->
+  <rect x="178" y="246" width="44" height="44" rx="10" fill="#fbd3b0"/>
+  <!-- Face -->
+  <path d="M138 175 C138 128 262 128 262 175 C262 232 233 262 200 264 C167 262 138 232 138 175 Z" fill="#ffdec2" stroke="#1c1824" stroke-width="4"/>
+  <!-- Ears -->
+  <ellipse cx="135" cy="195" rx="9" ry="15" fill="#fbd3b0" stroke="#1c1824" stroke-width="3"/>
+  <ellipse cx="265" cy="195" rx="9" ry="15" fill="#fbd3b0" stroke="#1c1824" stroke-width="3"/>
+  <!-- Spiky Blonde Hair -->
+  <path d="M128 168 L108 135 L138 132 L125 95 L162 110 L175 72 L200 100 L225 72 L238 110 L275 95 L262 132 L292 135 L272 168 L252 152 L200 156 L148 152 Z" fill="#ffd83d" stroke="#1c1824" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Ninja Headband -->
+  <path d="M134 148 Q200 158 266 148 L266 170 Q200 180 134 170 Z" fill="#232c3d" stroke="#1c1824" stroke-width="3"/>
+  <rect x="164" y="149" width="72" height="24" rx="5" fill="#cbd5e1" stroke="#1c1824" stroke-width="2.5"/>
+  <!-- Leaf swirl symbol -->
+  <path d="M204 161 C204 155 194 155 194 161 C194 166 202 167 205 163 C207 160 205 154 198 154 C191 154 190 163 195 167 L188 167" fill="none" stroke="#1c1824" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="172" cy="195" rx="12" ry="11" fill="#ffffff" stroke="#1c1824" stroke-width="3"/>
+  <circle cx="174" cy="195" r="6.5" fill="#2892f5"/>
+  <circle cx="174" cy="195" r="3" fill="#111827"/>
+  <ellipse cx="228" cy="195" rx="12" ry="11" fill="#ffffff" stroke="#1c1824" stroke-width="3"/>
+  <circle cx="226" cy="195" r="6.5" fill="#2892f5"/>
+  <circle cx="226" cy="195" r="3" fill="#111827"/>
+  <!-- Whisker marks -->
+  <g stroke="#7c4f3d" stroke-width="2.6" stroke-linecap="round">
+    <line x1="147" y1="205" x2="165" y2="207"/>
+    <line x1="145" y1="213" x2="165" y2="213"/>
+    <line x1="148" y1="221" x2="165" y2="219"/>
+    <line x1="253" y1="205" x2="235" y2="207"/>
+    <line x1="255" y1="213" x2="235" y2="213"/>
+    <line x1="252" y1="221" x2="235" y2="219"/>
+  </g>
+  <!-- Confident smile -->
+  <path d="M182 234 Q200 246 218 232" fill="none" stroke="#1c1824" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

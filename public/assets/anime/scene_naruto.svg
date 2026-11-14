@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="60%" stop-color="#3b1d5e"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="rasengan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#night)"/>
+  <!-- Giant Glowing Moon -->
+  <circle cx="300" cy="165" r="95" fill="#fef3c7" opacity="0.9"/>
+  <circle cx="300" cy="165" r="115" fill="#fde68a" opacity="0.25"/>
+  <!-- Ninja Rooftops & Water Towers -->
+  <path d="M0 330 L85 275 L170 330 L170 450 L0 450 Z" fill="#1e1b2e"/>
+  <path d="M415 320 L510 265 L600 320 L600 450 L415 450 Z" fill="#1e1b2e"/>
+  <rect x="200" y="310" width="200" height="140" fill="#111827"/>
+  <!-- Glowing Blue Rasengan Swirl -->
+  <circle cx="300" cy="275" r="68" fill="url(#rasengan)"/>
+  <circle cx="300" cy="275" r="36" fill="none" stroke="#e0f2fe" stroke-width="4" stroke-dasharray="28 10"/>
+  <circle cx="300" cy="275" r="24" fill="none" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="18 8"/>
+  <!-- Leaf Swirl Crest -->
+  <path d="M312 165 C312 140 282 140 282 165 C282 184 308 188 316 172 C322 158 310 135 288 138 C264 142 265 178 286 190 L262 190" fill="none" stroke="#d97706" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+</svg>

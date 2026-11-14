@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="aura" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#ffe566" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#ff8c00" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#111a33" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1836"/>
+      <stop offset="100%" stop-color="#293f73"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="200" cy="215" r="175" fill="url(#aura)"/>
+  <!-- Energy Sparks -->
+  <path d="M75 180 L95 140 L85 190 Z" fill="#fff099" opacity="0.8"/>
+  <path d="M325 170 L305 130 L315 185 Z" fill="#fff099" opacity="0.8"/>
+  <!-- Wild Spiky Black Hair -->
+  <path d="M126 195 L72 175 L112 148 L75 112 L130 116 L112 72 L162 94 L188 45 L212 90 L262 56 L252 104 L315 88 L280 132 L332 148 L284 176 L312 198 L266 198 L134 198 Z" fill="#12141c" stroke="#08090d" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Orange & Blue Martial Arts Gi -->
+  <path d="M80 400 C88 308 135 280 200 280 C265 280 312 308 320 400 Z" fill="#f97316"/>
+  <path d="M148 286 L200 356 L252 286 L232 282 L200 326 L168 282 Z" fill="#1e40af"/>
+  <path d="M168 282 L200 326 L232 282 Z" fill="#fed7aa"/>
+  <circle cx="242" cy="342" r="20" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <!-- Neck -->
+  <rect x="178" y="248" width="44" height="42" rx="8" fill="#fbd3b0"/>
+  <!-- Face -->
+  <path d="M142 175 C142 135 258 135 258 175 C258 228 232 260 200 264 C168 260 142 228 142 175 Z" fill="#ffdec2" stroke="#12141c" stroke-width="4"/>
+  <!-- Bangs -->
+  <path d="M142 172 L162 142 L176 178 L195 144 L212 182 L234 146 L258 174 L245 140 L155 140 Z" fill="#12141c"/>
+  <!-- Determined Eyes & Brows -->
+  <path d="M158 186 L186 193" stroke="#12141c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M242 186 L214 193" stroke="#12141c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M161 193 L185 197 L183 206 L162 204 Z" fill="#ffffff" stroke="#12141c" stroke-width="2.5"/>
+  <circle cx="174" cy="200" r="4.5" fill="#12141c"/>
+  <path d="M239 193 L215 197 L217 206 L238 204 Z" fill="#ffffff" stroke="#12141c" stroke-width="2.5"/>
+  <circle cx="226" cy="200" r="4.5" fill="#12141c"/>
+  <!-- Nose & Smirk -->
+  <path d="M200 204 L204 215 L197 217" fill="none" stroke="#12141c" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M184 236 Q200 242 218 233" fill="none" stroke="#12141c" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e6fb8"/>
+      <stop offset="65%" stop-color="#5ec2f2"/>
+      <stop offset="100%" stop-color="#b8ebff"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b4f8c"/>
+      <stop offset="100%" stop-color="#06284d"/>
+    </linearGradient>
+    <linearGradient id="hat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe066"/>
+      <stop offset="100%" stop-color="#e6a817"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#sky)"/>
+  <circle cx="325" cy="78" r="38" fill="#fff5b8" opacity="0.9"/>
+  <ellipse cx="95" cy="95" rx="55" ry="20" fill="#ffffff" opacity="0.8"/>
+  <ellipse cx="130" cy="88" rx="35" ry="18" fill="#ffffff" opacity="0.85"/>
+  <rect y="310" width="400" height="90" fill="url(#sea)"/>
+  <path d="M0 320 Q50 308 100 320 T200 320 T300 320 T400 320" fill="none" stroke="#7fe3ff" stroke-width="4" opacity="0.6"/>
+  <!-- Shoulders & Red Vest -->
+  <path d="M90 400 C95 315 130 285 200 285 C270 285 305 315 310 400 Z" fill="#d92626"/>
+  <path d="M168 288 L175 400 L225 400 L232 288 Z" fill="#f7c8a0"/>
+  <path d="M168 288 L145 350 L172 365 Z" fill="#b31919"/>
+  <path d="M232 288 L255 350 L228 365 Z" fill="#b31919"/>
+  <circle cx="174" cy="340" r="5" fill="#ffd24c"/>
+  <circle cx="174" cy="365" r="5" fill="#ffd24c"/>
+  <!-- Neck -->
+  <rect x="178" y="248" width="44" height="48" rx="12" fill="#f7c8a0"/>
+  <!-- Face -->
+  <path d="M138 175 C138 125 262 125 262 175 C262 232 235 262 200 264 C165 262 138 232 138 175 Z" fill="#ffdbb8" stroke="#231815" stroke-width="4"/>
+  <!-- Ears -->
+  <ellipse cx="135" cy="195" rx="10" ry="16" fill="#f7c8a0" stroke="#231815" stroke-width="3.5"/>
+  <ellipse cx="265" cy="195" rx="10" ry="16" fill="#f7c8a0" stroke="#231815" stroke-width="3.5"/>
+  <!-- Messy Black Hair -->
+  <path d="M130 175 L120 155 L145 150 L140 128 L175 135 L200 122 L225 135 L260 128 L255 150 L280 155 L270 175 L252 162 L238 182 L220 162 L200 185 L180 162 L162 182 L148 162 Z" fill="#181a24"/>
+  <!-- Eyes -->
+  <ellipse cx="173" cy="192" rx="12" ry="13" fill="#ffffff" stroke="#231815" stroke-width="3"/>
+  <circle cx="175" cy="193" r="6" fill="#1b1b22"/>
+  <circle cx="177" cy="190" r="2" fill="#ffffff"/>
+  <ellipse cx="227" cy="192" rx="12" ry="13" fill="#ffffff" stroke="#231815" stroke-width="3"/>
+  <circle cx="225" cy="193" r="6" fill="#1b1b22"/>
+  <circle cx="227" cy="190" r="2" fill="#ffffff"/>
+  <!-- Scar under left eye -->
+  <path d="M158 208 Q170 218 182 214" fill="none" stroke="#8c3030" stroke-width="3" stroke-linecap="round"/>
+  <line x1="165" y1="208" x2="163" y2="218" stroke="#8c3030" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="175" y1="210" x2="174" y2="220" stroke="#8c3030" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Nose & Big Grin -->
+  <path d="M198 200 L203 209 L196 211" fill="none" stroke="#231815" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M168 228 Q200 256 232 228 Q200 233 168 228 Z" fill="#ffffff" stroke="#231815" stroke-width="3.5"/>
+  <line x1="200" y1="230" x2="200" y2="243" stroke="#231815" stroke-width="2"/>
+  <!-- Iconic Straw Hat -->
+  <ellipse cx="200" cy="134" rx="122" ry="30" fill="url(#hat)" stroke="#231815" stroke-width="4"/>
+  <path d="M134 130 C138 72 262 72 266 130 Z" fill="url(#hat)" stroke="#231815" stroke-width="4"/>
+  <path d="M135 118 Q200 132 265 118 L266 131 Q200 144 134 131 Z" fill="#d92626" stroke="#231815" stroke-width="3"/>
+</svg>
